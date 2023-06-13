@@ -22,7 +22,10 @@ public class Variables {
 //        x = 25;
 //        System.out.println(x);  // 25
 
-        var x = 10;
-        System.out.println(x);  // 10
+//        var x = 10;
+//        System.out.println(x);  // 10
+
+        var x;      // ! Ошибка, переменная не инициализирована
+        x = 10;
     }
 }
