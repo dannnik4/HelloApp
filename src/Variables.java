@@ -4,7 +4,13 @@ public class Variables {
 //        x = 10;     // присвоение значения
 //        System.out.println(x);  // 10
 
-        int x = 10;     // объявление и инициализация переменной
+//        int x = 10;     // объявление и инициализация переменной
+//        System.out.println(x);  // 10
+
+        int x, y;
+        x = 10;
+        y = 25;
         System.out.println(x);  // 10
+        System.out.println(y);  // 25
     }
 }
