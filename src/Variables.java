@@ -25,7 +25,11 @@ public class Variables {
 //        var x = 10;
 //        System.out.println(x);  // 10
 
-        var x;      // ! Ошибка, переменная не инициализирована
-        x = 10;
+//        var x;      // ! Ошибка, переменная не инициализирована
+//        x = 10;
+
+        final int LIMIT = 5;
+        System.out.println(LIMIT);  // 5
+// LIMIT=57; // так мы уже не можем написать, так как LIMIT - константа
     }
 }
