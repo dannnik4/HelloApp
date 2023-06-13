@@ -17,9 +17,12 @@ public class Variables {
 //        System.out.println(x);  // 8
 //        System.out.println(y);  // 15
 
-        int x = 10;
+//        int x = 10;
+//        System.out.println(x);  // 10
+//        x = 25;
+//        System.out.println(x);  // 25
+
+        var x = 10;
         System.out.println(x);  // 10
-        x = 25;
-        System.out.println(x);  // 25
     }
 }
