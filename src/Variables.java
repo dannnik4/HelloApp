@@ -7,10 +7,14 @@ public class Variables {
 //        int x = 10;     // объявление и инициализация переменной
 //        System.out.println(x);  // 10
 
-        int x, y;
-        x = 10;
-        y = 25;
-        System.out.println(x);  // 10
-        System.out.println(y);  // 25
+//        int x, y;
+//        x = 10;
+//        y = 25;
+//        System.out.println(x);  // 10
+//        System.out.println(y);  // 25
+
+        int x = 8, y = 15;
+        System.out.println(x);  // 8
+        System.out.println(y);  // 15
     }
 }
