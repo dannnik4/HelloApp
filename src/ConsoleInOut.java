@@ -27,6 +27,7 @@ public class ConsoleInOut {
         int num = in.nextInt();
 
         System.out.printf("Your number: %d \n", num);
+        in.nextLine();
 
         System.out.print("Input name: ");
         String name1 = in.nextLine();
