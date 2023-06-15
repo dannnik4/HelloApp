@@ -11,5 +11,7 @@ public class ConsoleInOut {
         int x = 5;
         int y = 6;
         System.out.println("x=" + x + "; y=" + y);
+
+        System.out.printf("x=%d; y=%d \n", x, y);
     }
 }
