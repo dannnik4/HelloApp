@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ConsoleInOut {
     public static void main(String args[]) {
         System.out.println("Hello world!");
@@ -19,5 +21,12 @@ public class ConsoleInOut {
         float height = 1.7f;
 
         System.out.printf("Name: %s  Age: %d  Height: %.2f \n", name, age, height);
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int num = in.nextInt();
+
+        System.out.printf("Your number: %d \n", num);
+        in.close();
     }
 }
