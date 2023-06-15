@@ -5,5 +5,7 @@ public class ConsoleInOut {
 
         System.out.print("Hello world!");
         System.out.print("Bye world...");
+
+        System.out.print("Hello world \n");
     }
 }
