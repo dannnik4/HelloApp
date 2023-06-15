@@ -6,6 +6,10 @@ public class ConsoleInOut {
         System.out.print("Hello world!");
         System.out.print("Bye world...");
 
-        System.out.print("Hello world \n");
+        System.out.print("\nHello world\n");
+
+        int x = 5;
+        int y = 6;
+        System.out.println("x=" + x + "; y=" + y);
     }
 }
