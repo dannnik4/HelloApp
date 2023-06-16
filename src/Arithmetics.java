@@ -22,5 +22,10 @@ public class Arithmetics {
 
         double k1 = 10.0 / 4;     // 2.5
         System.out.println(k1);
+
+        a = 33;
+        b = 5;
+        int c4 = a % b;  // 3
+        int d4 = 22 % 4; // 2 (22 - 4*5 = 2)
     }
 }
