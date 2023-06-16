@@ -36,5 +36,9 @@ public class Arithmetics {
         b = a++;
         System.out.println(a);  // 9
         System.out.println(b);  // 8
+
+        b = --a;
+        System.out.println(a);  // 7
+        System.out.println(b);  // 7
     }
 }
