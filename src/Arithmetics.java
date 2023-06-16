@@ -44,5 +44,10 @@ public class Arithmetics {
         b = a--;
         System.out.println(a);  // 7
         System.out.println(b);  // 8
+
+        a = 8;
+        b = 7;
+        c = a + 5 * ++b;
+        System.out.println(c);  // 48
     }
 }
