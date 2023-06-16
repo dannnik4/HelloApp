@@ -27,5 +27,10 @@ public class Arithmetics {
         b = 5;
         int c4 = a % b;  // 3
         int d4 = 22 % 4; // 2 (22 - 4*5 = 2)
+
+        a = 8;
+        b = ++a;
+        System.out.println(a);  // 9
+        System.out.println(b);  // 9
     }
 }
