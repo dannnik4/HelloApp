@@ -16,5 +16,8 @@ public class Arithmetics {
         b = 5;
         int c3 = a / b;  // 4
         double d3 = 22.5 / 4.5;  // 5.0
+
+        double k = 10 / 4;     // 2
+        System.out.println(k);
     }
 }
