@@ -19,5 +19,8 @@ public class Arithmetics {
 
         double k = 10 / 4;     // 2
         System.out.println(k);
+
+        double k1 = 10.0 / 4;     // 2.5
+        System.out.println(k1);
     }
 }
