@@ -5,9 +5,10 @@ public class Arithmetics {
         int c = a + b;  // 17
         int d = 4 + b;  // 11
 
-        int a1 = 10;
-        int b2 = 7;
-        int c3 = a - b;  // 3
-        int d4 = 4 - a;  // -6
+        int c1 = a - b;  // 3
+        int d1 = 4 - a;  // -6
+
+        int c2 = a * b;  // 70
+        int d2 = b * 5;  // 35
     }
 }
