@@ -52,5 +52,10 @@ public class Arithmetics {
 
         c = (a + 5) * ++b;
         System.out.println(c);  // 104
+
+        int x = 10 / 5 * 2;
+
+        double d5 = 2.0 - 1.1;
+        System.out.println(d);
     }
 }
