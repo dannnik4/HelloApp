@@ -49,5 +49,8 @@ public class Arithmetics {
         b = 7;
         c = a + 5 * ++b;
         System.out.println(c);  // 48
+
+        c = (a + 5) * ++b;
+        System.out.println(c);  // 104
     }
 }
