@@ -25,5 +25,10 @@ public class ArithmeticsQuestions {
         int step23 = step22 / num5; // 1
         int step24 = step21 + step23; // 21
         int step25 = result2 + step24; // 33
+
+
+        int x = 8;
+        int y = 9;
+        int z = x++ + ++y; // 8 + 10 = 18
     }
 }
