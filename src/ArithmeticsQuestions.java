@@ -30,5 +30,11 @@ public class ArithmeticsQuestions {
         int x = 8;
         int y = 9;
         int z = x++ + ++y; // 8 + 10 = 18
+
+
+        double x1 = 8.8;
+        double y1 = 1.5;
+        double z1 = x1 - y1; // 8.8 - 1.5 = 7.300000000000001
+        System.out.println(z1);
     }
 }
