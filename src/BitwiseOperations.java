@@ -17,5 +17,13 @@ public class BitwiseOperations {
         int a12 = 4; //100
         int b12 = 5;//101
         System.out.println(a12 | b12); // результат 5 - 101
+
+        int number = 45; // 1001 Значение, которое надо зашифровать - в двоичной форме 101101
+        int key = 102; //Ключ шифрования - в двоичной системе 1100110
+        int encrypt = number ^ key; //Результатом будет число 1001011 или 75
+        System.out.println("Зашифрованное число: " +encrypt);
+
+        int decrypt = encrypt ^ key; // Результатом будет исходное число 45
+        System.out.println("Расшифрованное число: " + decrypt);
     }
 }
