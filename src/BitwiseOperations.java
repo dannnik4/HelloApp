@@ -25,5 +25,8 @@ public class BitwiseOperations {
 
         int decrypt = encrypt ^ key; // Результатом будет исходное число 45
         System.out.println("Расшифрованное число: " + decrypt);
+
+        byte a = 12;                 // 0000 1100
+        System.out.println(~a);     //  1111 0011   или -13
     }
 }
