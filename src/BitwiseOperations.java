@@ -10,5 +10,12 @@ public class BitwiseOperations {
         int a2 = 4; //100
         int b2 = 5; //101
         System.out.println(a2 & b2); // результат 4
+
+        int a11 = 2; //010
+        int b11 = 5;//101
+        System.out.println(a11|b11); // результат 7 - 111
+        int a12 = 4; //100
+        int b12 = 5;//101
+        System.out.println(a12 | b12); // результат 5 - 101
     }
 }
