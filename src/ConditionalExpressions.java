@@ -21,5 +21,9 @@ public class ConditionalExpressions {
         boolean c4 = 10 >= 10;    // true
         boolean b4 = 10 >= 4;     // true
         boolean d4 = 10 >= 20;    // false
+
+        boolean c = 10 <= 10;    // true
+        boolean b = 10 <= 4;     // false
+        boolean d = 10 <= 20;    // true
     }
 }
