@@ -13,5 +13,9 @@ public class ConditionalExpressions {
         int a2 = 10;
         int b2 = 4;
         boolean c2 = a < b;   // false
+
+        int a3 = 10;
+        int b3 = 4;
+        boolean c3 = a > b;   // true
     }
 }
