@@ -9,5 +9,9 @@ public class ConditionalExpressions {
         int b1 = 4;
         boolean c1 = a != b;         // true
         boolean d1 = a != 10;       // false
+
+        int a2 = 10;
+        int b2 = 4;
+        boolean c2 = a < b;   // false
     }
 }
