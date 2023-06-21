@@ -9,5 +9,9 @@ public class BasicDataTypesConversions {
 
         byte c = 7;
         int d = c;  // преобразование от byte к int
+
+        int a1 = 2147483647;
+        float b1 = a;            // от типа int к типу float
+        System.out.println(b1);  // 2.14748365E9
     }
 }
