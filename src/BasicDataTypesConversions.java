@@ -38,5 +38,8 @@ public class BasicDataTypesConversions {
         byte a8 = 3;
         short b8 = 4;
         byte c8 = (byte)(a8+b8);
+
+        int d9 = 'a' + 5;
+        System.out.println(d9);  // 102
     }
 }
