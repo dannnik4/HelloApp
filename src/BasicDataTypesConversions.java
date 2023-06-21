@@ -6,5 +6,8 @@ public class BasicDataTypesConversions {
         int a = 4;
         byte b = (byte)a;  // преобразование типов: от типа int к типу byte
         System.out.println(b); // 4
+
+        byte c = 7;
+        int d = c;  // преобразование от byte к int
     }
 }
