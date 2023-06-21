@@ -13,5 +13,8 @@ public class BasicDataTypesConversions {
         int a1 = 2147483647;
         float b1 = a;            // от типа int к типу float
         System.out.println(b1);  // 2.14748365E9
+
+        long a2 = 4;
+        int b2 = (int) a2;
     }
 }
