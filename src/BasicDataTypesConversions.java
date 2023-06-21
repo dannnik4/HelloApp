@@ -16,5 +16,9 @@ public class BasicDataTypesConversions {
 
         long a2 = 4;
         int b2 = (int) a2;
+
+        int a3 = 5;
+        byte b3 = (byte) a;
+        System.out.println(b3);      // 5
     }
 }
