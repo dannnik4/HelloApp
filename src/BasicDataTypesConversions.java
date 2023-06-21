@@ -18,7 +18,11 @@ public class BasicDataTypesConversions {
         int b2 = (int) a2;
 
         int a3 = 5;
-        byte b3 = (byte) a;
+        byte b3 = (byte) a3;
         System.out.println(b3);      // 5
+
+        int a4 = 258;
+        byte b4 = (byte) a4;
+        System.out.println(b4);      // 2
     }
 }
