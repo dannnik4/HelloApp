@@ -24,5 +24,11 @@ public class BasicDataTypesConversions {
         int a4 = 258;
         byte b4 = (byte) a4;
         System.out.println(b4);      // 2
+
+        double a5 = 56.9898;
+        int b5 = (int)a5;
+
+        double a6 = 56.9898;
+        int b6 = (int)Math.round(a6);
     }
 }
