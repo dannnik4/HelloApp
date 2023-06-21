@@ -30,5 +30,13 @@ public class BasicDataTypesConversions {
 
         double a6 = 56.9898;
         int b6 = (int)Math.round(a6);
+
+        int a7 = 3;
+        double b7 = 4.6;
+        double c7 = a7+b7;
+
+        byte a8 = 3;
+        short b8 = 4;
+        byte c8 = (byte)(a8+b8);
     }
 }
