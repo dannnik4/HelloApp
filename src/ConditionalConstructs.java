@@ -22,5 +22,9 @@ public class ConditionalConstructs {
         else{
             System.out.println("Числа равны");
         }
+
+        if(num1 > num2 && num1>7){
+            System.out.println("Первое число больше второго и больше 7");
+        }
     }
 }
