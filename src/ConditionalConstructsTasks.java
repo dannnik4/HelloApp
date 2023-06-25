@@ -20,13 +20,30 @@ public class ConditionalConstructsTasks {
 //        }
 //        in.close();
 
-        System.out.print("Введите число: ");
-        int num1 = in.nextInt();
+//        System.out.print("Введите число: ");
+//        int num1 = in.nextInt();
+//
+//        if (num1 < 9 && num1 > 2){
+//            System.out.print("Число "+num1+" больше 2 и меньше 9");
+//        } else {
+//            System.out.print("Неизвестное число");
+//        }
+//        in.close();
 
-        if (num1 < 9 && num1 > 2){
-            System.out.print("Число "+num1+" больше 2 и меньше 9");
+        System.out.print("Введите сумму вклада: ");
+        int sum = in.nextInt();
+
+        if (sum > 0 && sum < 100) {
+            sum += sum * 0.05;
+            System.out.print("Сумма вклада вместе с начисленными 5% составит "+sum+" грн");
+        } else if (sum >= 100 && sum < 200) {
+            sum += sum * 0.07;
+            System.out.print("Сумма вклада вместе с начисленными 7% составит "+sum+" грн");
+        } else if (sum >= 200) {
+            sum += sum * 0.10;
+            System.out.print("Сумма вклада вместе с начисленными 10% составит "+sum+" грн");
         } else {
-            System.out.print("Неизвестное число");
+            System.out.print("Ошибка");
         }
         in.close();
     }
