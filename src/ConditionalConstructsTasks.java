@@ -17,5 +17,6 @@ public class ConditionalConstructsTasks {
         } else {
             System.out.print("Первое число ("+num1+") равно второму числу ("+num2+")");
         }
+        in.close();
     }
 }
