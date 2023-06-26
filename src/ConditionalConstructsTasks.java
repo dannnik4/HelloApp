@@ -65,5 +65,6 @@ public class ConditionalConstructsTasks {
                 System.out.println("Неизвестная операция");
                 break;
         }
+        in.close();
     }
 }
