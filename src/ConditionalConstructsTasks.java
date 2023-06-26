@@ -76,5 +76,24 @@ public class ConditionalConstructsTasks {
         System.out.println("Введите номер операции: 1.Сложение  2.Вычитание  3.Умножение");
         int operation = in.nextInt();
         int result = 0;
+
+        switch (operation)
+        {
+            case 1:
+                result = num1 + num2;
+                break;
+            case 2:
+                result = num1 - num2;
+                break;
+            case 3:
+                result = num1 * num2;
+                break;
+            default:
+                System.out.println("Неизвестная операция");
+        }
+        if(operation >=1 && operation <= 3){
+            System.out.printf("Результат операции: %d", result);
+        }
+        in.close();
     }
 }
