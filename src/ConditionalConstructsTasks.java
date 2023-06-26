@@ -30,22 +30,22 @@ public class ConditionalConstructsTasks {
 //        }
 //        in.close();
 
-        System.out.print("Введите сумму вклада: ");
-        int sum = in.nextInt();
-
-        if (sum > 0 && sum < 100) {
-            sum += sum * 0.05;
-            System.out.print("Сумма вклада вместе с начисленными 5% составит "+sum+" грн");
-        } else if (sum >= 100 && sum < 200) {
-            sum += sum * 0.07;
-            System.out.print("Сумма вклада вместе с начисленными 7% составит "+sum+" грн");
-        } else if (sum >= 200) {
-            sum += sum * 0.10;
-            System.out.print("Сумма вклада вместе с начисленными 10% составит "+sum+" грн");
-        } else {
-            System.out.print("Ошибка");
-        }
-        in.close();
+//        System.out.print("Введите сумму вклада: ");
+//        int sum = in.nextInt();
+//
+//        if (sum > 0 && sum < 100) {
+//            sum += sum * 0.05;
+//            System.out.print("Сумма вклада вместе с начисленными 5% составит "+sum+" грн");
+//        } else if (sum >= 100 && sum < 200) {
+//            sum += sum * 0.07;
+//            System.out.print("Сумма вклада вместе с начисленными 7% составит "+sum+" грн");
+//        } else if (sum >= 200) {
+//            sum += sum * 0.10;
+//            System.out.print("Сумма вклада вместе с начисленными 10% составит "+sum+" грн");
+//        } else {
+//            System.out.print("Ошибка");
+//        }
+//        in.close();
 
         System.out.println("Введите номер операции: 1.Сложение  2.Вычитание  3.Умножение");
         int operation = in.nextInt();
