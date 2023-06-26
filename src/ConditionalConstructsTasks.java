@@ -91,7 +91,7 @@ public class ConditionalConstructsTasks {
             default:
                 System.out.println("Неизвестная операция");
         }
-        if(operation >=1 && operation <= 3){
+        if (operation >=1 && operation <= 3){
             System.out.printf("Результат операции: %d", result);
         }
         in.close();
