@@ -94,6 +94,5 @@ public class ConditionalConstructsTasks {
         if (operation >=1 && operation <= 3){
             System.out.printf("Результат операции: %d", result);
         }
-        in.close();
     }
 }
