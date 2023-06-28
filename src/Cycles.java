@@ -20,10 +20,17 @@ public class Cycles {
 //            i++;
 //        }
 
-        int n = 10;
-        for(int i=0, j = n - 1; i < j; i++, j--){
+//        int n = 10;
+//        for(int i=0, j = n - 1; i < j; i++, j--){
+//
+//            System.out.println(i * j);
+//        }
 
-            System.out.println(i * j);
+        int j = 7;
+        do{
+            System.out.println(j);
+            j--;
         }
+        while (j > 0);
     }
 }
