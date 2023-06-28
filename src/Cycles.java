@@ -40,11 +40,17 @@ public class Cycles {
 //        }
 //        while (j > 0);
 
-        int j = 6;
-        while (j > 0){
+//        int j = 6;
+//        while (j > 0){
+//
+//            System.out.println(j);
+//            j--;
+//        }
 
-            System.out.println(j);
-            j--;
+        for (int i = 0; i < 10; i++){
+            if (i == 5)
+                break;
+            System.out.println(i);
         }
     }
 }
