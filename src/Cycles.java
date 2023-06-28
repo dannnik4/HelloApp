@@ -33,11 +33,18 @@ public class Cycles {
 //        }
 //        while (j > 0);
 
-        int j = -1;
-        do{
+//        int j = -1;
+//        do{
+//            System.out.println(j);
+//            j--;
+//        }
+//        while (j > 0);
+
+        int j = 6;
+        while (j > 0){
+
             System.out.println(j);
             j--;
         }
-        while (j > 0);
     }
 }
