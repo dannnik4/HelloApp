@@ -14,10 +14,16 @@ public class Cycles {
 //            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
 //        }
 
-        int i = 1;
-        for (; i<9;){
-            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
-            i++;
+//        int i = 1;
+//        for (; i<9;){
+//            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
+//            i++;
+//        }
+
+        int n = 10;
+        for(int i=0, j = n - 1; i < j; i++, j--){
+
+            System.out.println(i * j);
         }
     }
 }
