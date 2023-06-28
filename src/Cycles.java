@@ -26,7 +26,14 @@ public class Cycles {
 //            System.out.println(i * j);
 //        }
 
-        int j = 7;
+//        int j = 7;
+//        do{
+//            System.out.println(j);
+//            j--;
+//        }
+//        while (j > 0);
+
+        int j = -1;
         do{
             System.out.println(j);
             j--;
