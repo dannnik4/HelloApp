@@ -5,13 +5,19 @@ public class Cycles {
 //            // действия
 //        }
 
-        for (int i = 1; i < 9; i++){
-            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
-        }
+//        for (int i = 1; i < 9; i++){
+//            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
+//        }
 
 //        int i = 1;
 //        for (; ;){
 //            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
 //        }
+
+        int i = 1;
+        for (; i<9;){
+            System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
+            i++;
+        }
     }
 }
