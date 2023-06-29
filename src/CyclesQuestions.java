@@ -17,14 +17,24 @@ public class CyclesQuestions {
 //            }
 //        }
 
-        int j = 2;
-        for (int i = 2; i < 32; i = i * 2)
+//        int j = 2;
+//        for (int i = 2; i < 32; i = i * 2)
+//        {
+//            while(i < j)
+//            {
+//                j = j * 2;
+//            }
+//            i = j - i;
+//        }
+
+        for(int i = 1; i < 3; i++)
         {
-            while(i < j)
+            switch (i)
             {
-                j = j * 2;
+                default:
+                    System.out.printf("i = %d \n", i++);
+                    break;
             }
-            i = j - i;
         }
     }
 }
