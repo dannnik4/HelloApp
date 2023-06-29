@@ -7,14 +7,24 @@ public class CyclesQuestions {
 //            i *= -2;
 //        }
 
+//        int j = 2;
+//        for (int i = 1; i < 100; i = i + 2)
+//        {
+//            j = j - 1;
+//            while(j < 15)
+//            {
+//                j = j + 5;
+//            }
+//        }
+
         int j = 2;
-        for (int i = 1; i < 100; i = i + 2)
+        for (int i = 2; i < 32; i = i * 2)
         {
-            j = j - 1;
-            while(j < 15)
+            while(i < j)
             {
-                j = j + 5;
+                j = j * 2;
             }
+            i = j - i;
         }
     }
 }
