@@ -21,14 +21,28 @@ public class CyclesTasks {
 //        }
 //        System.out.println(population);
 
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Введите сумму вклада: ");
+//        float deposit = in.nextFloat();
+//        System.out.print("Введите сумму вклада: ");
+//        int months = in.nextInt();
+//
+//        for(int i = 1; i <= months; i++){
+//            deposit += deposit * 0.07;
+//        }
+//        System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
+//        in.close();
+
         Scanner in = new Scanner(System.in);
         System.out.print("Введите сумму вклада: ");
         float deposit = in.nextFloat();
         System.out.print("Введите сумму вклада: ");
         int months = in.nextInt();
+        int i = months;
 
-        for(int i = 1; i <= months; i++){
+        while (i > 0){
             deposit += deposit * 0.07;
+            i--;
         }
         System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
         in.close();
