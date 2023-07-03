@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CyclesTasks {
     public static void main(String args[]) {
 //        int population = 10000000;
@@ -9,14 +11,25 @@ public class CyclesTasks {
 //        }
 //        System.out.println(population);
 
-        int population = 10000000;
-        int born = 14;
-        int death = 8;
-        for(int i = 1; i <= 10; i++){
-            if (born > 7) born -= 1;
-            if (death > 6) death -=1;
-            population += population * (born - death) / 1000;
+//        int population = 10000000;
+//        int born = 14;
+//        int death = 8;
+//        for(int i = 1; i <= 10; i++){
+//            if (born > 7) born -= 1;
+//            if (death > 6) death -=1;
+//            population += population * (born - death) / 1000;
+//        }
+//        System.out.println(population);
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите сумму вклада: ");
+        float deposit = in.nextInt();
+        System.out.print("Введите сумму вклада: ");
+        int months = in.nextInt();
+
+        for(int i = 1; i <= months; i++){
+            deposit += deposit * 0.07;
         }
-        System.out.println(population);
+        System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
     }
 }
