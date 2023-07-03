@@ -23,7 +23,7 @@ public class CyclesTasks {
 
         Scanner in = new Scanner(System.in);
         System.out.print("Введите сумму вклада: ");
-        float deposit = in.nextInt();
+        float deposit = in.nextFloat();
         System.out.print("Введите сумму вклада: ");
         int months = in.nextInt();
 
@@ -31,5 +31,6 @@ public class CyclesTasks {
             deposit += deposit * 0.07;
         }
         System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
+        in.close();
     }
 }
