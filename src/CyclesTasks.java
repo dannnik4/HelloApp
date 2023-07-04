@@ -33,18 +33,18 @@ public class CyclesTasks {
 //        System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
 //        in.close();
 
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите сумму вклада: ");
-        float deposit = in.nextFloat();
-        System.out.print("Введите сумму вклада: ");
-        int months = in.nextInt();
-        int i = months;
-
-        while (i > 0){
-            deposit += deposit * 0.07;
-            i--;
-        }
-        System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
-        in.close();
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Введите сумму вклада: ");
+//        float deposit = in.nextFloat();
+//        System.out.print("Введите сумму вклада: ");
+//        int months = in.nextInt();
+//        int i = months;
+//
+//        while (i > 0){
+//            deposit += deposit * 0.07;
+//            i--;
+//        }
+//        System.out.print("После " + months + " месяцев сумма вклада составит " + deposit);
+//        in.close();
     }
 }
