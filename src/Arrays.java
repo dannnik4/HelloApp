@@ -17,14 +17,19 @@ public class Arrays {
 //
 //        int[] nums2 = { 1, 2, 3, 5 };
 
-        int[] nums = new int[4];
-        // устанавливаем значения элементов массива
-        nums[0] = 1;
-        nums[1] = 2;
-        nums[2] = 4;
-        nums[3] = 100;
+//        int[] nums = new int[4];
+//        // устанавливаем значения элементов массива
+//        nums[0] = 1;
+//        nums[1] = 2;
+//        nums[2] = 4;
+//        nums[3] = 100;
+//
+//        // получаем значение третьего элемента массива
+//        System.out.println(nums[2]);    // 4
 
-        // получаем значение третьего элемента массива
-        System.out.println(nums[2]);    // 4
+        int[] nums = {1, 2, 3, 4, 5};
+        int length = nums.length;   // 5
+
+        int last = nums[nums.length-1];
     }
 }
