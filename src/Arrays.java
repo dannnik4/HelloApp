@@ -62,10 +62,24 @@ public class Arrays {
 //            System.out.println(array[i]);
 //        }
 
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
-        for (int i=0; i<array.length;i++){
-            array[i] = array[i] * 2;
-            System.out.println(array[i]);
+//        int[] array = new int[] { 1, 2, 3, 4, 5 };
+//        for (int i=0; i<array.length;i++){
+//            array[i] = array[i] * 2;
+//            System.out.println(array[i]);
+//        }
+
+        int[][] nums = new int[][]
+                {
+                        {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}
+                };
+        for (int i = 0; i < nums.length; i++){
+            for(int j=0; j < nums[i].length; j++){
+
+                System.out.printf("%d ", nums[i][j]);
+            }
+            System.out.println();
         }
     }
 }
