@@ -42,9 +42,19 @@ public class Arrays {
 //
 //        int[][][] nums3 = new int[2][3][4];
 
-        int[][] nums = new int[3][];
-        nums[0] = new int[2];
-        nums[1] = new int[3];
-        nums[2] = new int[5];
+//        int[][] nums = new int[3][];
+//        nums[0] = new int[2];
+//        nums[1] = new int[3];
+//        nums[2] = new int[5];
+
+//        for (тип_данных название_переменной : контейнер){
+//            // действия
+//        }
+
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        for (int i : array){
+
+            System.out.println(i);
+        }
     }
 }
