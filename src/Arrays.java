@@ -35,5 +35,9 @@ public class Arrays {
         int[] nums1 = new int[] { 0, 1, 2, 3, 4, 5 };
 
         int[][] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
+
+        // установим элемент первого столбца второй строки
+        nums2[1][0]=44;
+        System.out.println(nums2[1][0]);
     }
 }
