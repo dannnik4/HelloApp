@@ -51,10 +51,15 @@ public class Arrays {
 //            // действия
 //        }
 
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
-        for (int i : array){
+//        int[] array = new int[] { 1, 2, 3, 4, 5 };
+//        for (int i : array){
+//
+//            System.out.println(i);
+//        }
 
-            System.out.println(i);
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        for (int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
         }
     }
 }
