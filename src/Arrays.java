@@ -32,15 +32,19 @@ public class Arrays {
 //
 //        int last = nums[nums.length-1];
 
-        int[] nums1 = new int[] { 0, 1, 2, 3, 4, 5 };
+//        int[] nums1 = new int[] { 0, 1, 2, 3, 4, 5 };
+//
+//        int[][] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
+//
+//        // установим элемент первого столбца второй строки
+//        nums2[1][0]=44;
+//        System.out.println(nums2[1][0]);
+//
+//        int[][][] nums3 = new int[2][3][4];
 
-        int[][] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
-
-        // установим элемент первого столбца второй строки
-        nums2[1][0]=44;
-        System.out.println(nums2[1][0]);
-
-
-        int[][][] nums3 = new int[2][3][4];
+        int[][] nums = new int[3][];
+        nums[0] = new int[2];
+        nums[1] = new int[3];
+        nums[2] = new int[5];
     }
 }
