@@ -27,9 +27,13 @@ public class Arrays {
 //        // получаем значение третьего элемента массива
 //        System.out.println(nums[2]);    // 4
 
-        int[] nums = {1, 2, 3, 4, 5};
-        int length = nums.length;   // 5
+//        int[] nums = {1, 2, 3, 4, 5};
+//        int length = nums.length;   // 5
+//
+//        int last = nums[nums.length-1];
 
-        int last = nums[nums.length-1];
+        int[] nums1 = new int[] { 0, 1, 2, 3, 4, 5 };
+
+        int[][] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
     }
 }
