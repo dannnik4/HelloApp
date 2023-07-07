@@ -13,7 +13,10 @@ public class ArraysQuestions {
 
 //        int[][] nums = {{ 1, 2 }, { 3, 4, 5 }, { 6, 7, 8, 9, 10 }};
 
-        int[][] nums = new int[3][3]{{ 1, 2, 3 }, { 3, 4, 5 }, { 6, 7, 8}};
+//        int[][] nums = new int[3][3]{{ 1, 2, 3 }, { 3, 4, 5 }, { 6, 7, 8}};
+
+
+        int[][] nums ={{ 1, 2, 3 }, { 3, 4, 5 }, { 6, 7, 8}};
 
         System.out.println(nums[2][1]);
     }
