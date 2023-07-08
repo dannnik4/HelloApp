@@ -4,7 +4,7 @@ public class Methods {
 //            // тело метода
 //        }
 
-        System.out.println("привет мир!");
+//        System.out.println("привет мир!");
     }
 
     void hello(){
