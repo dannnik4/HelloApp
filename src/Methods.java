@@ -5,13 +5,15 @@ public class Methods {
 //        }
 
 //        System.out.println("привет мир!");
+        hello();
+        welcome();
+        welcome();
     }
-
-    void hello(){
+    static void hello(){
 
         System.out.println("Hello");
     }
-    void welcome(){
+    static void welcome(){
 
         System.out.println("Welcome to Java 10");
     }
