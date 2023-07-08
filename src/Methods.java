@@ -5,6 +5,7 @@ public class Methods {
 //        }
 
 //        System.out.println("привет мир!");
+
         hello();
         welcome();
         welcome();
