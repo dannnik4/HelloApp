@@ -14,16 +14,30 @@ public class MethodsOptions {
 //        System.out.println(z);
 //    }
 
+//    public static void main (String args[]){
+//
+//        display("Tom", 34);
+//        display("Bob", 28);
+//        display("Sam", 23);
+//    }
+//    static void display(String name, int age){
+//
+//        System.out.println(name);
+//        System.out.println(age);
+//    }
+
     public static void main (String args[]){
 
-        display("Tom", 34);
-        display("Bob", 28);
-        display("Sam", 23);
+        sum(1, 2, 3);           // 6
+        sum(1, 2, 3, 4, 5);     // 15
+        sum();                  // 0
     }
-    static void display(String name, int age){
+    static void sum(int ...nums){
 
-        System.out.println(name);
-        System.out.println(age);
+        int result =0;
+        for(int n: nums)
+            result += n;
+        System.out.println(result);
     }
 
 }
