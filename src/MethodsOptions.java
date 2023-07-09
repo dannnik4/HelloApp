@@ -26,17 +26,31 @@ public class MethodsOptions {
 //        System.out.println(age);
 //    }
 
-    public static void main (String args[]){
+//    public static void main (String args[]){
+//
+//        sum(1, 2, 3);           // 6
+//        sum(1, 2, 3, 4, 5);     // 15
+//        sum();                  // 0
+//    }
+//    static void sum(int ...nums){
+//
+//        int result =0;
+//        for(int n: nums)
+//            result += n;
+//        System.out.println(result);
+//    }
 
-        sum(1, 2, 3);           // 6
-        sum(1, 2, 3, 4, 5);     // 15
-        sum();                  // 0
+    public static void main(String[] args) {
+
+        sum("Welcome!", 20,10);
+        sum("Hello World!");
     }
-    static void sum(int ...nums){
+    static void sum(String message, int ...nums){
 
+        System.out.println(message);
         int result =0;
-        for(int n: nums)
-            result += n;
+        for(int x:nums)
+            result+=x;
         System.out.println(result);
     }
 
