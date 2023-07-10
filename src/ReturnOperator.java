@@ -13,24 +13,47 @@ public class ReturnOperator {
 //        return a + b + c;
 //    }
 
+//    public static void main (String args[]){
+//
+//        System.out.println(daytime(7));     // Good morning
+//        System.out.println(daytime(13));    // Good after noon
+//        System.out.println(daytime(18));    // Good evening
+//        System.out.println(daytime(2));     // Good night
+//    }
+//    static String daytime(int hour){
+//
+//        if (hour >24 || hour < 0)
+//            return "Invalid data";
+//        else if(hour > 21 || hour < 6)
+//            return "Good night";
+//        else if(hour >= 15)
+//            return "Good evening";
+//        else if(hour >= 11)
+//            return "Good after noon";
+//        else
+//            return "Good morning";
+//    }
+
     public static void main (String args[]){
 
-        System.out.println(daytime(7));     // Good morning
-        System.out.println(daytime(13));    // Good after noon
-        System.out.println(daytime(18));    // Good evening
-        System.out.println(daytime(2));     // Good night
+        daytime(7);     // Good morning
+        daytime(13);    // Good after noon
+        daytime(32);    //
+        daytime(56);    //
+        daytime(2);     // Good night
     }
-    static String daytime(int hour){
+    static void daytime(int hour){
 
         if (hour >24 || hour < 0)
-            return "Invalid data";
-        else if(hour > 21 || hour < 6)
-            return "Good night";
+            return;
+        if(hour > 21 || hour < 6)
+            System.out.println("Good night");
         else if(hour >= 15)
-            return "Good evening";
+            System.out.println("Good evening");
         else if(hour >= 11)
-            return "Good after noon";
+            System.out.println("Good after noon");
         else
-            return "Good morning";
+            System.out.println("Good morning");
     }
+}
 }
