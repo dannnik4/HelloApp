@@ -12,12 +12,25 @@ public class RecursiveFunctions {
 //        return x * factorial(x - 1);
 //    }
 
-    static int factorial(int x){
-        int result=1;
-        for (int i = 1; i <= x; i++)
-        {
-            result *= i;
+//    static int factorial(int x){
+//        int result=1;
+//        for (int i = 1; i <= x; i++)
+//        {
+//            result *= i;
+//        }
+//        return  result;
+//    }
+
+    static int fibonachi(int n){
+
+        if (n == 0){
+            return 0;
         }
-        return  result;
+        if (n == 1){
+            return 1;
+        }
+        else{
+            return fibonachi(n - 1) + fibonachi(n - 2);
+        }
     }
 }
