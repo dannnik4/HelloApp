@@ -3,12 +3,21 @@ public class RecursiveFunctions {
 
     }
 
-    static int factorial(int x) {
+//    static int factorial(int x) {
+//
+//        if (x == 1) {
+//
+//            return 1;
+//        }
+//        return x * factorial(x - 1);
+//    }
 
-        if (x == 1) {
-
-            return 1;
+    static int factorial(int x){
+        int result=1;
+        for (int i = 1; i <= x; i++)
+        {
+            result *= i;
         }
-        return x * factorial(x - 1);
+        return  result;
     }
 }
