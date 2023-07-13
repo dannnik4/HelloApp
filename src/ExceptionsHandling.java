@@ -11,18 +11,32 @@ public class ExceptionsHandling {
 //        }
 //        System.out.println("Программа завершена");
 
-        try{
-            int[] numbers = new int[3];
-            numbers[4]=45;
-            System.out.println(numbers[4]);
-        }
-        catch(Exception ex){
+//        try{
+//            int[] numbers = new int[3];
+//            numbers[4]=45;
+//            System.out.println(numbers[4]);
+//        }
+//        catch(Exception ex){
+//
+//            ex.printStackTrace();
+//        }
+//        finally{
+//            System.out.println("Блок finally");
+//        }
+//        System.out.println("Программа завершена");
 
-            ex.printStackTrace();
+        int[] numbers = new int[3];
+        try{
+            numbers[6]=45;
+            numbers[6]=Integer.parseInt("gfd");
         }
-        finally{
-            System.out.println("Блок finally");
+        catch(ArrayIndexOutOfBoundsException ex){
+
+            System.out.println("Выход за пределы массива");
         }
-        System.out.println("Программа завершена");
+        catch(NumberFormatException ex){
+
+            System.out.println("Ошибка преобразования из строки в число");
+        }
     }
 }
