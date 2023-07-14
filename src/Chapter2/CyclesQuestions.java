@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class CyclesQuestions {
     public static void main(String args[]) {
 //        int i = 5;

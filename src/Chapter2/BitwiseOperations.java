@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class BitwiseOperations {
     public static void main(String args[]) {
         byte b = 7;     // 0000 0111

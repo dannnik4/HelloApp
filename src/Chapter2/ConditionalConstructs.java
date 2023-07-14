@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class ConditionalConstructs {
     public static void main(String args[]) {
         int num1 = 6;

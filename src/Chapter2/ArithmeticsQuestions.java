@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class ArithmeticsQuestions {
     public static void main(String args[]) {
         int a = 2;

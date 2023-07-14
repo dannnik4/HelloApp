@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class RecursiveFunctions {
     public static void main(String[] args) {
 

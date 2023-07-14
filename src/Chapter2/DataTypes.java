@@ -1,3 +1,5 @@
+package Chapter2;
+
 public class DataTypes {
     public static void main(String args[]) {
         boolean isActive = false;
