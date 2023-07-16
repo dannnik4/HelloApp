@@ -2,9 +2,6 @@ package Chapter3;
 
 import java.util.Scanner; // импорт класса Scanner
 
-import static java.lang.System.*;
-import static java.lang.Math.*;
-
 public class Packages {
 //    public static void main(String[] args) {
 //
