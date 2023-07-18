@@ -1,8 +1,8 @@
 package Chapter3;
 
 public class StaticMembers {
-//    public static void main(String[] args) {
-//
+    public static void main(String[] args) {
+
 //        Person2 tom = new Person2();
 //        Person2 bob = new Person2();
 //
@@ -33,14 +33,38 @@ public class StaticMembers {
 //    }
 //}
 
-    public static void main(String[] args) {
+//        double radius = 60;
+//        System.out.printf("Radisu: %f \n", radius);             // 60
+//        System.out.printf("Area: %f \n", Math.PI * radius);     // 188,4
+//    }
+//}
+//
+//class Math {
+//    public static final double PI = 3.14;
+//}
 
-        double radius = 60;
-        System.out.printf("Radisu: %f \n", radius);             // 60
-        System.out.printf("Area: %f \n", Math.PI * radius);     // 188,4
+        Person2 tom = new Person2();
+        Person2 bob = new Person2();
+
+        tom.displayId();    // Id = 105
+        bob.displayId();    // Id = 106
     }
 }
+class Person2{
 
-class Math {
-    public static final double PI = 3.14;
+    private int id;
+    static int counter;
+
+    static{
+        counter = 105;
+        System.out.println("Static initializer");
+    }
+    Person2(){
+        id=counter++;
+        System.out.println("Constructor");
+    }
+    public void displayId(){
+
+        System.out.printf("Id: %d \n", id);
+    }
 }
