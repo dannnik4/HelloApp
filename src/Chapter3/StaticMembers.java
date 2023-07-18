@@ -69,29 +69,47 @@ public class StaticMembers {
 //    }
 //}
 
-        Person2.displayCounter();    // Counter: 1
+//        Person2.displayCounter();    // Counter: 1
+//
+//        Person2 tom = new Person2();
+//        Person2 bob = new Person2();
+//
+//        Person2.displayCounter();    // Counter: 3
+//    }
+//}
+//class Person2{
+//
+//    private int id;
+//    private static int counter = 1;
+//
+//    Person2(){
+//        id = counter++;
+//    }
+//    // статический метод
+//    public static void displayCounter(){
+//
+//        System.out.printf("Counter: %d \n", counter);
+//    }
+//    public void displayId(){
+//
+//        System.out.printf("Id: %d \n", id);
+//    }
+//}
 
-        Person2 tom = new Person2();
-        Person2 bob = new Person2();
-
-        Person2.displayCounter();    // Counter: 3
+        System.out.println(Operation.sum(45, 23));          // 68
+        System.out.println(Operation.subtract(45, 23));     // 22
+        System.out.println(Operation.multiply(4, 23));      // 92
     }
 }
-class Person2{
+class Operation{
 
-    private int id;
-    private static int counter = 1;
-
-    Person2(){
-        id = counter++;
+    static int sum(int x, int y){
+        return x + y;
     }
-    // статический метод
-    public static void displayCounter(){
-
-        System.out.printf("Counter: %d \n", counter);
+    static int subtract(int x, int y){
+        return x - y;
     }
-    public void displayId(){
-
-        System.out.printf("Id: %d \n", id);
+    static int multiply(int x, int y){
+        return x * y;
     }
 }
