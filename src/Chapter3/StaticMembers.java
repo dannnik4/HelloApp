@@ -43,25 +43,52 @@ public class StaticMembers {
 //    public static final double PI = 3.14;
 //}
 
+//        Person2 tom = new Person2();
+//        Person2 bob = new Person2();
+//
+//        tom.displayId();    // Id = 105
+//        bob.displayId();    // Id = 106
+//    }
+//}
+//class Person2{
+//
+//    private int id;
+//    static int counter;
+//
+//    static{
+//        counter = 105;
+//        System.out.println("Static initializer");
+//    }
+//    Person2(){
+//        id=counter++;
+//        System.out.println("Constructor");
+//    }
+//    public void displayId(){
+//
+//        System.out.printf("Id: %d \n", id);
+//    }
+//}
+
+        Person2.displayCounter();    // Counter: 1
+
         Person2 tom = new Person2();
         Person2 bob = new Person2();
 
-        tom.displayId();    // Id = 105
-        bob.displayId();    // Id = 106
+        Person2.displayCounter();    // Counter: 3
     }
 }
 class Person2{
 
     private int id;
-    static int counter;
+    private static int counter = 1;
 
-    static{
-        counter = 105;
-        System.out.println("Static initializer");
-    }
     Person2(){
-        id=counter++;
-        System.out.println("Constructor");
+        id = counter++;
+    }
+    // статический метод
+    public static void displayCounter(){
+
+        System.out.printf("Counter: %d \n", counter);
     }
     public void displayId(){
 
