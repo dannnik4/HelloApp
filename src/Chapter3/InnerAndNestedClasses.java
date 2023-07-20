@@ -35,27 +35,62 @@ public class InnerAndNestedClasses {
 //    }
 //}
 
-        Person3 tom = new Person3("Tom");
-        tom.setAccount("qwerty");
-    }
-}
-class Person3{
+//        Person3 tom = new Person3("Tom");
+//        tom.setAccount("qwerty");
+//    }
+//}
+//class Person3{
+//
+//    private String name;
+//
+//    Person3(String name){
+//        this.name = name;
+//    }
+//
+//    public void setAccount (String password){
+//
+//        class Account{
+//
+//            void display(){
+//                System.out.printf("Account Login: %s \t Password: %s \n", name, password);
+//            }
+//        }
+//        Account account = new Account();
+//        account.display();
+//    }
+//}
 
-    private String name;
+        class Math {
 
-    Person3(String name){
-        this.name = name;
-    }
+            public static class Factorial {
 
-    public void setAccount (String password){
+                private int result;
+                private int key;
 
-        class Account{
+                public Factorial(int number, int x) {
 
-            void display(){
-                System.out.printf("Account Login: %s \t Password: %s \n", name, password);
+                    result = number;
+                    key = x;
+                }
+
+                public int getResult() {
+                    return result;
+                }
+
+                public int getKey() {
+                    return key;
+                }
+            }
+
+            public static Factorial getFactorial(int x) {
+
+                int result = 1;
+                for (int i = 1; i <= x; i++) {
+
+                    result *= i;
+                }
+                return new Factorial(result, x);
             }
         }
-        Account account = new Account();
-        account.display();
     }
 }
