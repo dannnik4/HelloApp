@@ -64,15 +64,54 @@ public class Inheritance {
 //    }
 //}
 
-        Employee sam = new Employee("Sam", "Microsoft");
-        sam.display();  // Sam
-        // Works in Microsoft
+//        Employee sam = new Employee("Sam", "Microsoft");
+//        sam.display();  // Sam
+//        // Works in Microsoft
+//    }
+//}
+//class Person3 {
+//
+//    String name;
+//    public String getName(){ return name; }
+//
+//    public Person3(String name){
+//
+//        this.name=name;
+//    }
+//
+//    public void display(){
+//
+//        System.out.println("Name: " + name);
+//    }
+//}
+//class Employee extends Person3{
+//
+//    String company;
+//
+//    public Employee(String name, String company) {
+//
+//        super(name);
+//        this.company=company;
+//    }
+//    @Override
+//    public void display(){
+//
+//        System.out.printf("Name: %s \n", getName());
+//        System.out.printf("Works in %s \n", company);
+//    }
+//}
+
+        Person3 tom = new Person3("Tom");
+        tom.display();
+        Person3 sam = new Employee("Sam", "Oracle");
+        sam.display();
     }
 }
 class Person3 {
 
     String name;
-    public String getName(){ return name; }
+
+    public String getName() { return name; }
 
     public Person3(String name){
 
@@ -81,9 +120,10 @@ class Person3 {
 
     public void display(){
 
-        System.out.println("Name: " + name);
+        System.out.printf("Person %s \n", name);
     }
 }
+
 class Employee extends Person3{
 
     String company;
@@ -91,12 +131,11 @@ class Employee extends Person3{
     public Employee(String name, String company) {
 
         super(name);
-        this.company=company;
+        this.company = company;
     }
     @Override
     public void display(){
 
-        System.out.printf("Name: %s \n", getName());
-        System.out.printf("Works in %s \n", company);
+        System.out.printf("Employee %s works in %s \n", super.getName(), company);
     }
 }
