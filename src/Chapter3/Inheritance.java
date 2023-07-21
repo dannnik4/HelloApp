@@ -17,5 +17,11 @@ public class Inheritance {
                 System.out.println("Name: " + name);
             }
         }
+        class Employee extends Person3{
+            public Employee(String name){
+                super(name);    // если базовый класс определяет конструктор
+                //  то производный класс должен его вызвать
+            }
+        }
     }
 }
