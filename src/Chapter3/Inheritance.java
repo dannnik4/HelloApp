@@ -24,42 +24,79 @@ public class Inheritance {
 //            }
 //        }
 
+//        Employee sam = new Employee("Sam", "Microsoft");
+//        sam.display();  // Sam
+//        sam.work();     // Sam works in Microsoft
+//    }
+//}
+//
+//class Person3 {
+//
+//    String name;
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public Person3(String name) {
+//
+//        this.name = name;
+//    }
+//
+//    public void display() {
+//
+//        System.out.println("Name: " + name);
+//    }
+//}
+//
+//class Employee extends Person3 {
+//
+//    String company;
+//
+//    public Employee(String name, String company) {
+//
+//        super(name);
+//        this.company = company;
+//    }
+//
+//    public void work() {
+//        System.out.printf("%s works in %s \n", getName(), company);
+//    }
+//}
+
         Employee sam = new Employee("Sam", "Microsoft");
         sam.display();  // Sam
-        sam.work();     // Sam works in Microsoft
+        // Works in Microsoft
     }
 }
-
 class Person3 {
 
     String name;
+    public String getName(){ return name; }
 
-    public String getName() {
-        return name;
+    public Person3(String name){
+
+        this.name=name;
     }
 
-    public Person3(String name) {
-
-        this.name = name;
-    }
-
-    public void display() {
+    public void display(){
 
         System.out.println("Name: " + name);
     }
 }
-
-class Employee extends Person3 {
+class Employee extends Person3{
 
     String company;
 
     public Employee(String name, String company) {
 
         super(name);
-        this.company = company;
+        this.company=company;
     }
+    @Override
+    public void display(){
 
-    public void work() {
-        System.out.printf("%s works in %s \n", getName(), company);
+        System.out.printf("Name: %s \n", getName());
+        System.out.printf("Works in %s \n", company);
     }
 }
