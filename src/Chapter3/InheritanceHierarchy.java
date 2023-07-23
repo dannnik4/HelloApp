@@ -66,11 +66,22 @@ public class InheritanceHierarchy {
 //    public int getSum(){ return sum; }
 //}
 
-        Object sam = new Employee("Sam", "Oracle");
+//        Object sam = new Employee("Sam", "Oracle");
+//
+//// нисходящее преобразование от Object к типу Employee
+//        Employee emp = (Employee)sam;
+//        emp.display();
+//        System.out.println(emp.getCompany());
 
-// нисходящее преобразование от Object к типу Employee
-        Employee emp = (Employee)sam;
-        emp.display();
-        System.out.println(emp.getCompany());
+        Object kate = new Client("Kate", "DeutscheBank", 2000);
+        if(kate instanceof Employee){
+
+            Employee employeeKate = (Employee) kate;
+            employeeKate.display();
+        }
+        else{
+
+            System.out.println("Conversion is invalid");
+        }
     }
 }
