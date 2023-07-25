@@ -9,62 +9,88 @@ public class Interfaces {
 //    }
 //}
 
-        Book b1 = new Book("Java. Complete Referense.", "H. Shildt");
-        b1.print();
-
-        Printable p =new Journal("Foreign Affairs");
-        p.print();
-// Интерфейс не имеет метода getName, необходимо явное приведение
-        String name = ((Journal)p).getName();
-        System.out.println(name);
-    }
-}
-
-interface Printable {
-
-//    default void print(){
+//        Book b1 = new Book("Java. Complete Referense.", "H. Shildt");
+//        b1.print();
 //
-//        System.out.println("Undefined printable");
+//        Printable p =new Journal("Foreign Affairs");
+//        p.print();
+//// Интерфейс не имеет метода getName, необходимо явное приведение
+//        String name = ((Journal)p).getName();
+//        System.out.println(name);
 //    }
+//}
+//
+//interface Printable {
+//
+////    default void print(){
+////
+////        System.out.println("Undefined printable");
+////    }
+//
+//    void print();
+//
+//    static void read(){
+//
+//        System.out.println("Read printable");
+//    }
+//}
+//class Book implements Printable{
+//
+//    String name;
+//    String author;
+//
+//    Book(String name, String author){
+//
+//        this.name = name;
+//        this.author = author;
+//    }
+//
+//    public void print() {
+//
+//        System.out.printf("%s (%s) \n", name, author);
+//    }
+//}
+//
+//class Journal implements Printable {
+//
+//    private String name;
+//
+//    String getName() {
+//        return name;
+//    }
+//
+//    Journal(String name) {
+//
+//        this.name = name;
+//    }
+//
+//    public void print() {
+//        System.out.println(name);
+//    }
+//}
 
-    void print();
-
-    static void read(){
-
-        System.out.println("Read printable");
+        Calculatable c = new Calculation();
+        System.out.println(c.sum(1, 2));
+        System.out.println(c.sum(1, 2, 4));
     }
 }
-class Book implements Printable{
+class Calculation implements Calculatable{
 
-    String name;
-    String author;
-
-    Book(String name, String author){
-
-        this.name = name;
-        this.author = author;
-    }
-
-    public void print() {
-
-        System.out.printf("%s (%s) \n", name, author);
-    }
 }
+interface Calculatable{
 
-class Journal implements Printable {
-
-    private String name;
-
-    String getName() {
-        return name;
+    default int sum(int a, int b){
+        return sumAll(a, b);
+    }
+    default int sum(int a, int b, int c){
+        return sumAll(a, b, c);
     }
 
-    Journal(String name) {
-
-        this.name = name;
-    }
-
-    public void print() {
-        System.out.println(name);
+    private int sumAll(int... values){
+        int result = 0;
+        for(int n : values){
+            result += n;
+        }
+        return result;
     }
 }
