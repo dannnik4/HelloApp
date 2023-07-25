@@ -22,9 +22,16 @@ public class Interfaces {
 
 interface Printable {
 
-    default void print(){
+//    default void print(){
+//
+//        System.out.println("Undefined printable");
+//    }
 
-        System.out.println("Undefined printable");
+    void print();
+
+    static void read(){
+
+        System.out.println("Read printable");
     }
 }
 class Book implements Printable{
