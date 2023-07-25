@@ -11,6 +11,12 @@ public class Interfaces {
 
         Book b1 = new Book("Java. Complete Referense.", "H. Shildt");
         b1.print();
+
+        Printable p =new Journal("Foreign Affairs");
+        p.print();
+// Интерфейс не имеет метода getName, необходимо явное приведение
+        String name = ((Journal)p).getName();
+        System.out.println(name);
     }
 }
 
