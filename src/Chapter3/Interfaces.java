@@ -103,40 +103,97 @@ public class Interfaces {
 //    void printState(int n);
 //}
 
-        WaterPipe pipe = new WaterPipe();
-        pipe.printState(1);
-    }
-}
-class WaterPipe implements Stateable{
+//        WaterPipe pipe = new WaterPipe();
+//        pipe.printState(1);
+//    }
+//}
+//class WaterPipe implements Stateable{
+//
+//    public void printState(int n){
+//        if(n==OPEN)
+//            System.out.println("Water is opened");
+//        else if(n==CLOSED)
+//            System.out.println("Water is closed");
+//        else
+//            System.out.println("State is invalid");
+//    }
+//}
+//interface Stateable{
+//
+//    int OPEN = 1;
+//    int CLOSED = 0;
+//
+//    void printState(int n);
+//}
+//
+//interface Printable {
+//
+//    // методы интерфейса
+//}
+//
+//interface Searchable {
+//
+//    // методы интерфейса
+//}
+//
+//class Book implements Printable, Searchable{
+//
+//    // реализация класса
+//}
 
-    public void printState(int n){
-        if(n==OPEN)
-            System.out.println("Water is opened");
-        else if(n==CLOSED)
-            System.out.println("Water is closed");
+        Printable printable = createPrintable("Foreign Affairs",false);
+        printable.print();
+
+        read(new Book("Java for impatients", "Cay Horstmann"));
+        read(new Journal("Java Dayly News"));
+    }
+
+    static void read(Printable p){
+
+        p.print();
+    }
+
+    static Printable createPrintable(String name, boolean option){
+
+        if(option)
+            return new Book(name, "Undefined");
         else
-            System.out.println("State is invalid");
+            return new Journal(name);
     }
 }
-interface Stateable{
+interface Printable{
 
-    int OPEN = 1;
-    int CLOSED = 0;
-
-    void printState(int n);
+    void print();
 }
+class Book implements Printable{
 
-interface Printable {
+    String name;
+    String author;
 
-    // методы интерфейса
+    Book(String name, String author){
+
+        this.name = name;
+        this.author = author;
+    }
+
+    public void print() {
+
+        System.out.printf("%s (%s) \n", name, author);
+    }
 }
+class Journal implements Printable {
 
-interface Searchable {
+    private String name;
 
-    // методы интерфейса
-}
+    String getName(){
+        return name;
+    }
 
-class Book implements Printable, Searchable{
+    Journal(String name){
 
-    // реализация класса
+        this.name = name;
+    }
+    public void print() {
+        System.out.println(name);
+    }
 }
