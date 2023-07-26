@@ -125,3 +125,18 @@ interface Stateable{
 
     void printState(int n);
 }
+
+interface Printable {
+
+    // методы интерфейса
+}
+
+interface Searchable {
+
+    // методы интерфейса
+}
+
+class Book implements Printable, Searchable{
+
+    // реализация класса
+}
