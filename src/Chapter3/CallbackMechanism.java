@@ -1,37 +1,70 @@
 package Chapter3;
 
+import java.awt.*;
+import java.beans.EventHandler;
+
 public class CallbackMechanism {
     public static void main(String[] args) {
 
-        Button button = new Button(new ButtonClickHandler());
-        button.click();
-        button.click();
-        button.click();
-    }
-}
+//        Button button = new Button(new ButtonClickHandler());
+//        button.click();
+//        button.click();
+//        button.click();
+//    }
+//}
+//
+//class ButtonClickHandler implements EventHandler{
+//
+//    public void execute(){
+//
+//        System.out.println("Кнопка нажата!");
+//    }
+//}
+//
+//interface EventHandler{
+//
+//    void execute();
+//}
+//
+//class Button{
+//
+//    EventHandler handler;
+//    Button(EventHandler action){
+//
+//        this.handler=action;
+//    }
+//    public void click(){
+//
+//        handler.execute();
+//    }
+//}
 
-class ButtonClickHandler implements EventHandler{
+        Button tvButton = new Button(new EventHandler(){
 
-    public void execute(){
+            private boolean on = false;
+            public void execute(){
 
-        System.out.println("Кнопка нажата!");
-    }
-}
+                if(on) {
+                    System.out.println("Телевизор выключен..");
+                    on=false;
+                }
+                else {
+                    System.out.println("Телевизор включен!");
+                    on=true;
+                }
+            }
+        });
 
-interface EventHandler{
+        Button printButton = new Button(new EventHandler(){
 
-    void execute();
-}
+            public void execute(){
 
-class Button{
+                System.out.println("Запущена печать на принтере...");
+            }
+        });
 
-    EventHandler handler;
-    Button(EventHandler action){
-
-        this.handler=action;
-    }
-    public void click(){
-
-        handler.execute();
+        tvButton.click();
+        printButton.click();
+        tvButton.click();
     }
 }
