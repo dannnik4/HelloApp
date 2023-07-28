@@ -58,14 +58,29 @@ public class EnumerationEnum {
 //    SCIENCE_FICTION
 //}
 
-        Type[] types = Type.values();
-        for (Type s : types) { System.out.println(s); }
+//        Type[] types = Type.values();
+//        for (Type s : types) { System.out.println(s); }
+//    }
+//}
+//enum Type
+//{
+//    SCIENCE,
+//    BELLETRE,
+//    PHANTASY,
+//    SCIENCE_FICTION
+//}
+
+        System.out.println(Color.RED.getCode());        // #FF0000
+        System.out.println(Color.GREEN.getCode());      // #00FF00
+
+
     }
 }
-enum Type
-{
-    SCIENCE,
-    BELLETRE,
-    PHANTASY,
-    SCIENCE_FICTION
+enum Color{
+    RED("#FF0000"), BLUE("#0000FF"), GREEN("#00FF00");
+    private String code;
+    Color(String code){
+        this.code = code;
+    }
+    public String getCode(){ return code;}
 }
