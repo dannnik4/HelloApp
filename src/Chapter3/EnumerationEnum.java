@@ -85,13 +85,13 @@ public class EnumerationEnum {
 //    public String getCode(){ return code;}
 //}
 
-        Operation op = Operation.SUM;
+        Operation1 op = Operation1.SUM;
         System.out.println(op.action(10, 4));   // 14
-        op = Operation.MULTIPLY;
+        op = Operation1.MULTIPLY;
         System.out.println(op.action(6, 4));    // 24
     }
 }
-enum Operation{
+enum Operation1{
     SUM{
         public int action(int x, int y){ return x + y;}
     },
