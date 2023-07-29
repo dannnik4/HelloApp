@@ -4,7 +4,8 @@ public class ObjectClass {
     public static void main(String[] args) {
         Person4 tom = new Person4("Tom");
 //        System.out.println(tom.toString()); // Будет выводить что-то наподобие Person@7960847b
-        System.out.println(tom.toString()); // Person Tom
+//        System.out.println(tom.toString()); // Person Tom
+        System.out.println(tom.hashCode()); // 2036368507
     }
 }
 class Person4 {
@@ -17,8 +18,10 @@ class Person4 {
     }
 
     @Override
-    public String toString(){
-
-        return "Person " + name;
+//    public String toString(){
+//
+//        return "Person " + name;
+    public int hashCode(){
+        return 10 * name.hashCode() + 20456;
     }
 }
