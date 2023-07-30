@@ -12,17 +12,32 @@ public class Generics {
     }
 }
 
-class Account{
+//class Account{
+//
+//    private int id;
+//    private int sum;
+//
+//    Account(int id, int sum){
+//        this.id = id;
+//        this.sum = sum;
+//    }
+//
+//    public int getId() { return id; }
+//    public int getSum() { return sum; }
+//    public void setSum(int sum) { this.sum = sum; }
+//}
 
-    private int id;
+class Account<T>{
+
+    private T id;
     private int sum;
 
-    Account(int id, int sum){
+    Account(T id, int sum){
         this.id = id;
         this.sum = sum;
     }
 
-    public int getId() { return id; }
+    public T getId() { return id; }
     public int getSum() { return sum; }
     public void setSum(int sum) { this.sum = sum; }
 }
