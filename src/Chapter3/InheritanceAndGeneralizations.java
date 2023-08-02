@@ -22,6 +22,26 @@ public class InheritanceAndGeneralizations {
 //        }
 //    }
 
+//    class Account<T>
+//    {
+//        private T _id;
+//        T getId(){return _id;}
+//        Account(T id)
+//        {
+//            _id = id;
+//        }
+//    }
+//
+//    class DepositAccount<T, S> extends Account<T>{
+//
+//        private S _name;
+//        S getName(){return _name;}
+//        DepositAccount(T id, S name){
+//            super(id);
+//            this._name=name;
+//        }
+//    }
+
     class Account<T>
     {
         private T _id;
@@ -32,13 +52,10 @@ public class InheritanceAndGeneralizations {
         }
     }
 
-    class DepositAccount<T, S> extends Account<T>{
+    class DepositAccount extends Account<Integer>{
 
-        private S _name;
-        S getName(){return _name;}
-        DepositAccount(T id, S name){
-            super(id);
-            this._name=name;
+        DepositAccount(){
+            super(5);
         }
     }
 }
