@@ -59,23 +59,40 @@ public class InheritanceAndGeneralizations {
 //        }
 //    }
 
-    class Account
+//    class Account
+//    {
+//        private String _name;
+//        String getName(){return _name;}
+//        Account(String name)
+//        {
+//            _name=name;
+//        }
+//    }
+//
+//    class DepositAccount<T> extends Account{
+//
+//        private T _id;
+//        T getId(){return _id;}
+//        DepositAccount(String name, T id){
+//            super(name);
+//            _id = id;
+//        }
+//    }
+
+    class Account<T>
     {
-        private String _name;
-        String getName(){return _name;}
-        Account(String name)
+        private T _id;
+        T getId(){return _id;}
+        Account(T id)
         {
-            _name=name;
+            _id = id;
         }
     }
 
-    class DepositAccount<T> extends Account{
+    class DepositAccount<T> extends Account<T>{
 
-        private T _id;
-        T getId(){return _id;}
-        DepositAccount(String name, T id){
-            super(name);
-            _id = id;
+        DepositAccount(T id){
+            super(id);
         }
     }
 }
