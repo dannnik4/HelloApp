@@ -52,3 +52,44 @@ class Person5 implements Cloneable{
         return (Person5) super.clone();
     }
 }
+
+class Book1 implements Cloneable{
+
+    private String name;
+    private Author author;
+
+    public void setName(String n){ name=n;}
+    public String getName(){ return name;}
+
+    public void setAuthor(String n){ author.setName(n);}
+    public String getAuthor(){ return author.getName();}
+
+    Book1(String name, String author){
+
+        this.name = name;
+        this.author = new Author(author);
+    }
+
+    public String toString(){
+
+        return "Книга '" + name + "' (автор " +  author + ")";
+    }
+
+    public Book1 clone() throws CloneNotSupportedException{
+
+        return (Book1) super.clone();
+    }
+}
+
+class Author{
+
+    private String name;
+
+    public void setName(String n){ name=n;}
+    public String getName(){ return name;}
+
+    public Author(String name){
+
+        this.name=name;
+    }
+}
