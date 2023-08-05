@@ -47,4 +47,4 @@ public class Records {
 //        return String.format("Person[name=%s, age=%d]", name, age);
 //    }
 
-record Person6(String name, int age) { }
+//record Person6(String name, int age) { }
