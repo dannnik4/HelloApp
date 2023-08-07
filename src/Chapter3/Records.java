@@ -8,16 +8,19 @@ public class Records {
 //        Person tom = new Person("Tom", 36);
 //        System.out.println(tom.toString());
 
-        Person6 tom = new Person6("Tom",  36);
+//        Person6 tom = new Person6("Tom",  36);
+//
+//        System.out.println(tom.name());     // Tom
+//        System.out.println(tom.age());      // 36
+//        System.out.println(tom.hashCode());
+//
+//        Person bob = new Person("Bob", 21);
+//        Person tomas = new Person("Tom", 36);
+//        System.out.println(tom.equals(bob));    // false
+//        System.out.println(tom.equals(tomas));  // true
 
-        System.out.println(tom.name());     // Tom
-        System.out.println(tom.age());      // 36
-        System.out.println(tom.hashCode());
-
-        Person bob = new Person("Bob", 21);
-        Person tomas = new Person("Tom", 36);
-        System.out.println(tom.equals(bob));    // false
-        System.out.println(tom.equals(tomas));  // true
+        Person6 tom = new Person6("Tom", -116);
+        System.out.println(tom.toString());
     }
 }
 
@@ -48,3 +51,12 @@ public class Records {
 //    }
 
 //record Person6(String name, int age) { }
+record Person6(String name, int age) {
+
+    Person6{
+
+        if(age<1 || age > 110){
+            age = 18;
+        }
+    }
+}
