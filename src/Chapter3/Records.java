@@ -22,9 +22,12 @@ public class Records {
 //        Person6 tom = new Person6("Tom", -116);
 //        System.out.println(tom.toString());
 
-        Person6 tom = new Person6("Tom",  36);
+//        Person6 tom = new Person6("Tom",  36);
+//        System.out.println(tom.toString());
+//        System.out.println(tom.name());
+
+        Person6 tom = new Person6("Tom", "Smith",  36);
         System.out.println(tom.toString());
-        System.out.println(tom.name());
     }
 }
 
@@ -62,13 +65,17 @@ record Person6(String name, int age) {
 //        if(age<1 || age > 110){
 //            age = 18;
 //        }
+
+//    Person6(String name, int age) {
+//
+//        if (age < 0 || age > 120) age = 18;
+//
+//        this.name = name;
+//        this.age = age;
 //    }
 
-    Person6(String name, int age) {
+    Person6(String firstName, String lastName, int age) {
 
-        if (age < 0 || age > 120) age = 18;
-
-        this.name = name;
-        this.age = age;
+        this(firstName + " " + lastName, age);
     }
 }
