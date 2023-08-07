@@ -19,8 +19,12 @@ public class Records {
 //        System.out.println(tom.equals(bob));    // false
 //        System.out.println(tom.equals(tomas));  // true
 
-        Person6 tom = new Person6("Tom", -116);
+//        Person6 tom = new Person6("Tom", -116);
+//        System.out.println(tom.toString());
+
+        Person6 tom = new Person6("Tom",  36);
         System.out.println(tom.toString());
+        System.out.println(tom.name());
     }
 }
 
@@ -53,10 +57,18 @@ public class Records {
 //record Person6(String name, int age) { }
 record Person6(String name, int age) {
 
-    Person6{
+//    Person6{
+//
+//        if(age<1 || age > 110){
+//            age = 18;
+//        }
+//    }
 
-        if(age<1 || age > 110){
-            age = 18;
-        }
+    Person6(String name, int age) {
+
+        if (age < 0 || age > 120) age = 18;
+
+        this.name = name;
+        this.age = age;
     }
 }
