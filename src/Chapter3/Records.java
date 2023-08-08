@@ -22,12 +22,12 @@ public class Records {
 //        Person6 tom = new Person6("Tom", -116);
 //        System.out.println(tom.toString());
 
-//        Person6 tom = new Person6("Tom",  36);
-//        System.out.println(tom.toString());
-//        System.out.println(tom.name());
-
-        Person6 tom = new Person6("Tom", "Smith",  36);
+        Person6 tom = new Person6("Tom",  36);
         System.out.println(tom.toString());
+        System.out.println(tom.name());
+
+//        Person6 tom = new Person6("Tom", "Smith",  36);
+//        System.out.println(tom.toString());
     }
 }
 
@@ -74,8 +74,14 @@ record Person6(String name, int age) {
 //        this.age = age;
 //    }
 
-    Person6(String firstName, String lastName, int age) {
+//    Person6(String firstName, String lastName, int age) {
+//
+//        this(firstName + " " + lastName, age);
+//    }
 
-        this(firstName + " " + lastName, age);
+    public String name() { return "Mister " + name; }
+
+    public String toString() {
+        return String.format("Person %s, Age: %d", name, age);
     }
 }
