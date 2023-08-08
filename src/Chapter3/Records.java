@@ -22,7 +22,7 @@ public class Records {
 //        Person6 tom = new Person6("Tom", -116);
 //        System.out.println(tom.toString());
 
-        Person6 tom = new Person6("Tom",  36);
+        Person6 tom = new Person6("Tom", 36);
         System.out.println(tom.toString());
         System.out.println(tom.name());
 
@@ -79,9 +79,16 @@ record Person6(String name, int age) {
 //        this(firstName + " " + lastName, age);
 //    }
 
-    public String name() { return "Mister " + name; }
+//    public String name() { return "Mister " + name; }
+//
+//    public String toString() {
+//        return String.format("Person %s, Age: %d", name, age);
+//    }
 
-    public String toString() {
-        return String.format("Person %s, Age: %d", name, age);
+    static int minAge;
+
+    static {
+        minAge = 18;
+        System.out.println("Static initializer");
     }
 }
