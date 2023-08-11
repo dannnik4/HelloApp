@@ -2,7 +2,15 @@ package Chapter4;
 
 public class OwnExceptionClasses {
     public static void main(String[] args) {
+        try{
+            int result = OwnExceptionClasses.getFactorial(6);
+            System.out.println(result);
+        }
+        catch(FactorialException ex){
 
+            System.out.println(ex.getMessage());
+            System.out.println(ex.getNumber());
+        }
     }
 
     public static int getFactorial(int num) throws FactorialException{
