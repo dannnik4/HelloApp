@@ -1,8 +1,11 @@
 package Chapter5;
 
+import java.util.TreeSet;
+
 public class ComparableComparator {
     public static void main(String[] args) {
-
+        TreeSet<Person3> people = new TreeSet<Person3>();
+        people.add(new Person3("Tom"));
     }
 
 //    class Person3 {
@@ -19,7 +22,7 @@ public class ComparableComparator {
 //        }
 //    }
 
-    class Person3 implements Comparable<Person3>{
+    static class Person3 implements Comparable<Person3>{
 
         private String name;
         Person3(String name){
