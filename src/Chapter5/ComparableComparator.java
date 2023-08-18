@@ -28,9 +28,14 @@ public class ComparableComparator {
         }
         String getName(){return name;}
 
+//        public int compareTo(Person3 p){
+//
+//            return name.compareTo(p.getName());
+//        }
+
         public int compareTo(Person3 p){
 
-            return name.compareTo(p.getName());
+            return name.length()-p.getName().length();
         }
     }
 }
