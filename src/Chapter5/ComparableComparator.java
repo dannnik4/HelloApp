@@ -42,9 +42,17 @@ public class ComparableComparator {
         }
     }
 
-//    public interface Comparator<E> {
-//
+    static abstract class PersonComparator implements Comparator<Person3>{
+
+        public int compare(Person a, Person b){
+
+            return a.getName().compareTo(b.getName());
+        }
+    }
+
+    public interface Comparator<E> {
+
 //        int compare(T a, T b);
-//        // остальные методы
-//    }
+        // остальные методы
+    }
 }
