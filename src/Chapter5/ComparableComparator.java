@@ -6,6 +6,17 @@ public class ComparableComparator {
     public static void main(String[] args) {
         TreeSet<Person3> people = new TreeSet<Person3>();
         people.add(new Person3("Tom"));
+
+//        PersonComparator pcomp = new PersonComparator();
+//        TreeSet<Person3> people = new TreeSet<Person3>(pcomp);
+        people.add(new Person3("Tom"));
+        people.add(new Person3("Nick"));
+        people.add(new Person3("Alice"));
+        people.add(new Person3("Bill"));
+        for(Person3  p : people){
+
+            System.out.println(p.getName());
+        }
     }
 
 //    class Person3 {
