@@ -41,4 +41,10 @@ public class ComparableComparator {
             return name.length()-p.getName().length();
         }
     }
+
+//    public interface Comparator<E> {
+//
+//        int compare(T a, T b);
+//        // остальные методы
+//    }
 }
