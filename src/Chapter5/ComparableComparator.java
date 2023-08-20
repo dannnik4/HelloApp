@@ -17,6 +17,18 @@ public class ComparableComparator {
 //        for(Person3  p : people){
 //
 //            System.out.println(p.getName());
+
+        Comparator<Person3> pcomp = new PersonNameComparator().thenComparing(new PersonAgeComparator());
+        TreeSet<Person3> people = new TreeSet(pcomp);
+        people.add(new Person3("Tom", 23));
+        people.add(new Person3("Nick",34));
+        people.add(new Person3("Tom",10));
+        people.add(new Person3("Bill",14));
+
+        for(Person3  p : people){
+
+            System.out.println(p.getName() + " " + p.getAge());
+        }
         }
     }
 
@@ -82,16 +94,16 @@ class Person3{
     int getAge(){return age;}
 }
 
-class PersonNameComparator implements Comparator<Person> {
+class PersonNameComparator implements Comparator<Person3> {
 
-    public int compare(Person a, Person b){
+    public int compare(Person3 a, Person3 b){
 
         return a.getName().compareTo(b.getName());
     }
 }
-class PersonAgeComparator implements Comparator<Person>{
+class PersonAgeComparator implements Comparator<Person3>{
 
-    public int compare(Person a, Person b){
+    public int compare(Person3 a, Person3 b){
 
         if(a.getAge()> b.getAge())
             return 1;
