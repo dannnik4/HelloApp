@@ -1,5 +1,6 @@
 package Chapter5;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 public class ComparableComparator {
@@ -54,19 +55,6 @@ public class ComparableComparator {
 //    }
 }
 
-    class Person3{
-
-        private String name;
-        private int age;
-        public Person3(String n, int a){
-
-            name=n;
-            age=a;
-        }
-        String getName(){return name;}
-        int getAge(){return age;}
-    }
-
 //    static abstract class PersonComparator implements Comparator<Person3>{
 //
 //        public int compare(Person a, Person b){
@@ -80,3 +68,36 @@ public class ComparableComparator {
 //        int compare(T a, T b);
 //        // остальные методы
 //    }
+
+class Person3{
+
+    private String name;
+    private int age;
+    public Person3(String n, int a){
+
+        name=n;
+        age=a;
+    }
+    String getName(){return name;}
+    int getAge(){return age;}
+}
+
+class PersonNameComparator implements Comparator<Person> {
+
+    public int compare(Person a, Person b){
+
+        return a.getName().compareTo(b.getName());
+    }
+}
+class PersonAgeComparator implements Comparator<Person>{
+
+    public int compare(Person a, Person b){
+
+        if(a.getAge()> b.getAge())
+            return 1;
+        else if(a.getAge()< b.getAge())
+            return -1;
+        else
+            return 0;
+    }
+}
