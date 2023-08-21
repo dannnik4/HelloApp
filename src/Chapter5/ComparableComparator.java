@@ -19,7 +19,7 @@ public class ComparableComparator {
 //            System.out.println(p.getName());
 
         Comparator<Person3> pcomp = new PersonNameComparator().thenComparing(new PersonAgeComparator());
-        TreeSet<Person3> people = new TreeSet(pcomp);
+        TreeSet<Person3> people = new TreeSet<>(pcomp);
         people.add(new Person3("Tom", 23));
         people.add(new Person3("Nick",34));
         people.add(new Person3("Tom",10));
