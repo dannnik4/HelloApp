@@ -19,18 +19,18 @@ public class ComparableComparator {
 //            System.out.println(p.getName());
 
         Comparator<Person3> pcomp = new PersonNameComparator().thenComparing(new PersonAgeComparator());
-        TreeSet<Person3> people = new TreeSet<>(pcomp);
+        TreeSet<Person3> people = new TreeSet(pcomp);
         people.add(new Person3("Tom", 23));
-        people.add(new Person3("Nick",34));
-        people.add(new Person3("Tom",10));
-        people.add(new Person3("Bill",14));
+        people.add(new Person3("Nick", 34));
+        people.add(new Person3("Tom", 10));
+        people.add(new Person3("Bill", 14));
 
-        for(Person3  p : people){
+        for (Person3 p : people) {
 
             System.out.println(p.getName() + " " + p.getAge());
         }
-        }
     }
+}
 
 //    class Person3 {
 //
@@ -65,7 +65,6 @@ public class ComparableComparator {
 //            return name.length()-p.getName().length();
 //        }
 //    }
-}
 
 //    static abstract class PersonComparator implements Comparator<Person3>{
 //
@@ -81,33 +80,41 @@ public class ComparableComparator {
 //        // остальные методы
 //    }
 
-class Person3{
+class Person3 {
 
     private String name;
     private int age;
-    public Person3(String n, int a){
 
-        name=n;
-        age=a;
+    public Person3(String n, int a) {
+
+        name = n;
+        age = a;
     }
-    String getName(){return name;}
-    int getAge(){return age;}
+
+    String getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
 }
 
 class PersonNameComparator implements Comparator<Person3> {
 
-    public int compare(Person3 a, Person3 b){
+    public int compare(Person3 a, Person3 b) {
 
         return a.getName().compareTo(b.getName());
     }
 }
-class PersonAgeComparator implements Comparator<Person3>{
 
-    public int compare(Person3 a, Person3 b){
+class PersonAgeComparator implements Comparator<Person3> {
 
-        if(a.getAge()> b.getAge())
+    public int compare(Person3 a, Person3 b) {
+
+        if (a.getAge() > b.getAge())
             return 1;
-        else if(a.getAge()< b.getAge())
+        else if (a.getAge() < b.getAge())
             return -1;
         else
             return 0;
