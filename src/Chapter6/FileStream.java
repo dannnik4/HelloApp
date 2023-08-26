@@ -20,12 +20,31 @@ public class FileStream {
 //            System.out.println(ex.getMessage());
 //        }
 
+//        try(FileInputStream fin=new FileInputStream("notes.txt"))
+//        {
+//            int i;
+//            while((i=fin.read())!=-1){
+//
+//                System.out.print((char)i);
+//            }
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
+
         try(FileInputStream fin=new FileInputStream("notes.txt"))
         {
-            int i;
-            while((i=fin.read())!=-1){
+            byte[] buffer = new byte[256];
+            System.out.println("File data:");
 
-                System.out.print((char)i);
+            int count;
+            while((count=fin.read(buffer))!=-1){
+
+                for(int i=0; i<count;i++){
+
+                    System.out.print((char)buffer[i]);
+                }
             }
         }
         catch(IOException ex){
