@@ -47,4 +47,10 @@ public class ClosingStreams {
             System.out.println(ex.getMessage());
         }
     }
+
+//    try(FileInputStream fin=new FileInputStream("C://SomeDir//Hello.txt");
+//    FileOutputStream fos = new FileOutputStream("C://SomeDir//Hello2.txt"))
+//    {
+//        //..................
+//    }
 }
