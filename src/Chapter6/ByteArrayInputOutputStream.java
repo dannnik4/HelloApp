@@ -2,6 +2,8 @@ package Chapter6;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class ByteArrayInputOutputStream {
     public static void main(String[] args) {
@@ -24,6 +26,27 @@ public class ByteArrayInputOutputStream {
 //            System.out.println((char)c);
 //        }
 
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        String text = "Hello Wolrd!";
+//        byte[] buffer = text.getBytes();
+//        try{
+//            baos.write(buffer);
+//        }
+//        catch(Exception ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
+//        // превращаем массив байтов в строку
+//        System.out.println(baos.toString());
+//
+//        // получаем массив байтов и выводим по символьно
+//        byte[] array = baos.toByteArray();
+//        for(byte b: array){
+//
+//            System.out.print((char)b);
+//        }
+//        System.out.println();
+
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         String text = "Hello Wolrd!";
         byte[] buffer = text.getBytes();
@@ -34,15 +57,13 @@ public class ByteArrayInputOutputStream {
 
             System.out.println(ex.getMessage());
         }
-        // превращаем массив байтов в строку
-        System.out.println(baos.toString());
+        try(FileOutputStream fos = new FileOutputStream("hello.txt")){
 
-        // получаем массив байтов и выводим по символьно
-        byte[] array = baos.toByteArray();
-        for(byte b: array){
-
-            System.out.print((char)b);
+            baos.writeTo(fos);
         }
-        System.out.println();
+        catch(IOException e){
+
+            System.out.println(e.getMessage());
+        }
     }
 }
