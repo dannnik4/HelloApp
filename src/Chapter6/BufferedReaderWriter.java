@@ -29,13 +29,29 @@ public class BufferedReaderWriter {
 //            System.out.println(ex.getMessage());
 //        }
 
-        try(BufferedReader br = new BufferedReader(new FileReader("notes4.txt")))
-        {
-            //чтение построчно
-            String s;
-            while((s=br.readLine())!=null){
+//        try(BufferedReader br = new BufferedReader(new FileReader("notes4.txt")))
+//        {
+//            //чтение построчно
+//            String s;
+//            while((s=br.readLine())!=null){
+//
+//                System.out.println(s);
+//            }
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
 
-                System.out.println(s);
+        try(BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("notes5.txt")))
+        {
+            // чтение построчно
+            String text;
+            while(!(text=br.readLine()).equals("ESC")){
+
+                bw.write(text + "\n");
+                bw.flush();
             }
         }
         catch(IOException ex){
