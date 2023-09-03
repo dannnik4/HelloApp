@@ -1,16 +1,28 @@
 package Chapter6;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class BufferedReaderWriter {
     public static void main(String[] args) {
 
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("notes4.txt")))
+//        try(BufferedWriter bw = new BufferedWriter(new FileWriter("notes4.txt")))
+//        {
+//            String text = "Hello  World!\nHey! Teachers! Leave the kids alone.";
+//            bw.write(text);
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
+
+        try(BufferedReader br = new BufferedReader (new FileReader("notes4.txt")))
         {
-            String text = "Hello  World!\nHey! Teachers! Leave the kids alone.";
-            bw.write(text);
+            // чтение посимвольно
+            int c;
+            while((c=br.read())!=-1){
+
+                System.out.print((char)c);
+            }
         }
         catch(IOException ex){
 
