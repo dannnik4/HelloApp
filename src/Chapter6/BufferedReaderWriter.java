@@ -15,13 +15,27 @@ public class BufferedReaderWriter {
 //            System.out.println(ex.getMessage());
 //        }
 
-        try(BufferedReader br = new BufferedReader (new FileReader("notes4.txt")))
-        {
-            // чтение посимвольно
-            int c;
-            while((c=br.read())!=-1){
+//        try(BufferedReader br = new BufferedReader (new FileReader("notes4.txt")))
+//        {
+//            // чтение посимвольно
+//            int c;
+//            while((c=br.read())!=-1){
+//
+//                System.out.print((char)c);
+//            }
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
 
-                System.out.print((char)c);
+        try(BufferedReader br = new BufferedReader(new FileReader("notes4.txt")))
+        {
+            //чтение построчно
+            String s;
+            while((s=br.readLine())!=null){
+
+                System.out.println(s);
             }
         }
         catch(IOException ex){
