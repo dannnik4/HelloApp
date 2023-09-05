@@ -1,8 +1,11 @@
 package Chapter6;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Serialization {
+
+    //@SuppressWarnings("unchecked")
     public static void main(String[] args) {
 
 //        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.dat")))
@@ -15,15 +18,45 @@ public class Serialization {
 //            System.out.println(ex.getMessage());
 //        }
 
-        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.dat")))
+//        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.dat")))
+//        {
+//            Person1 p=(Person1)ois.readObject();
+//            System.out.printf("Name: %s \t Age: %d \n", p.getName(), p.getAge());
+//        }
+//        catch(Exception ex){
+//
+//            System.out.println(ex.getMessage());
+
+        String filename = "people.dat";
+        // создадим список объектов, которые будем записывать
+        ArrayList<Person> people = new ArrayList<Person>();
+        people.add(new Person("Tom", 30, 175, false));
+        people.add(new Person("Sam", 33, 178, true));
+
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename)))
         {
-            Person1 p=(Person1)ois.readObject();
-            System.out.printf("Name: %s \t Age: %d \n", p.getName(), p.getAge());
+            oos.writeObject(people);
+            System.out.println("File has been written");
         }
         catch(Exception ex){
 
             System.out.println(ex.getMessage());
         }
+
+        // десериализация в новый список
+        ArrayList<Person1> newPeople= new ArrayList<Person1>();
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename)))
+        {
+
+            newPeople=((ArrayList<Person1>)ois.readObject());
+        }
+        catch(Exception ex){
+
+            System.out.println(ex.getMessage());
+        }
+
+        for(Person1 p : newPeople)
+            System.out.printf("Name: %s \t Age: %d \n", p.getName(), p.getAge());
     }
 }
 class Person1 implements Serializable {
