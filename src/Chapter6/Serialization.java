@@ -1,16 +1,24 @@
 package Chapter6;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 
 public class Serialization {
     public static void main(String[] args) {
 
-        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.dat")))
+//        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.dat")))
+//        {
+//            Person1 p = new Person1("Sam", 33, 178, true);
+//            oos.writeObject(p);
+//        }
+//        catch(Exception ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
+
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.dat")))
         {
-            Person1 p = new Person1("Sam", 33, 178, true);
-            oos.writeObject(p);
+            Person1 p=(Person1)ois.readObject();
+            System.out.printf("Name: %s \t Age: %d \n", p.getName(), p.getAge());
         }
         catch(Exception ex){
 
