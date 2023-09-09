@@ -20,5 +20,6 @@ public class ClassString {
         if(s.isEmpty()) System.out.println("String is empty");
         if(s == null) System.out.println("String is null");
         if(s.length()==0) System.out.println("String is empty");    // ! Ошибка
+        if(s==null || s.length()==0) System.out.println("String is empty");
     }
 }
