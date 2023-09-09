@@ -18,5 +18,6 @@ public class ClassString {
         String s = "";   // пустая строка
         if(s.length() == 0) System.out.println("String is empty");
         if(s.isEmpty()) System.out.println("String is empty");
+        if(s == null) System.out.println("String is null");
     }
 }
