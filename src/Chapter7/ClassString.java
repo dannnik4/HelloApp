@@ -14,5 +14,8 @@ public class ClassString {
         System.out.println(str4); // come
 
         System.out.println(str1.length()); // 4
+
+        String s = "";   // пустая строка
+        if(s.length() == 0) System.out.println("String is empty");
     }
 }
