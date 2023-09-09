@@ -12,5 +12,7 @@ public class ClassString {
         System.out.println(str2); //
         System.out.println(str3); // hello
         System.out.println(str4); // come
+
+        System.out.println(str1.length()); // 4
     }
 }
