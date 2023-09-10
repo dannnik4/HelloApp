@@ -8,9 +8,10 @@ public class BasicStringOperations {
 //
 //        System.out.println(str3); // Hello Java
 
-        String str3 = "Год " + 2015;
-        System.out.println(str3);
+//        String str3 = "Год " + 2015;
+//        System.out.println(str3);
 
         str2 = str2.concat(str1); // HelloJava
+        System.out.println(str2);
     }
 }
