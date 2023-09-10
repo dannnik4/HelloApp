@@ -13,5 +13,8 @@ public class BasicStringOperations {
 
         str2 = str2.concat(str1); // HelloJava
         System.out.println(str2);
+
+        String str3 = String.join(" ", str2, str1); // Hello Java
+        System.out.println(str3);
     }
 }
