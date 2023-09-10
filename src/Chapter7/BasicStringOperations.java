@@ -10,5 +10,7 @@ public class BasicStringOperations {
 
         String str3 = "Год " + 2015;
         System.out.println(str3);
+
+        str2 = str2.concat(str1); // HelloJava
     }
 }
