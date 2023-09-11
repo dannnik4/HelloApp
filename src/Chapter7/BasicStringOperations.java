@@ -16,5 +16,9 @@ public class BasicStringOperations {
 
         String str3 = String.join(" ", str2, str1); // Hello Java
         System.out.println(str3);
+
+        String str = "Java";
+        char c = str.charAt(2);
+        System.out.println(c); // v
     }
 }
