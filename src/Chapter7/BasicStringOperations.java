@@ -17,8 +17,15 @@ public class BasicStringOperations {
         String str3 = String.join(" ", str2, str1); // Hello Java
         System.out.println(str3);
 
-        String str = "Java";
-        char c = str.charAt(2);
-        System.out.println(c); // v
+//        String str = "Java";
+//        char c = str.charAt(2);
+//        System.out.println(c); // v
+
+        String str = "Hello world!";
+        int start = 6;
+        int end = 11;
+        char[] dst=new char[end - start];
+        str.getChars(start, end, dst, 0);
+        System.out.println(dst); // world
     }
 }
