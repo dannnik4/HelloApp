@@ -27,5 +27,8 @@ public class BasicStringOperations {
         char[] dst=new char[end - start];
         str.getChars(start, end, dst, 0);
         System.out.println(dst); // world
+
+        System.out.println(str1.equals(str2)); // false
+        System.out.println(str1.equalsIgnoreCase(str2)); // true
     }
 }
