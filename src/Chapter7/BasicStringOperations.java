@@ -33,5 +33,9 @@ public class BasicStringOperations {
 
         boolean result = str1.regionMatches(6, str2, 2, 3);
         System.out.println(result); // true
+
+
+        System.out.println(str1.compareTo(str2)); // -15 - str1 меньше чем strt2
+        System.out.println(str1.compareTo(str3)); // 1 - str1 больше чем str3
     }
 }
