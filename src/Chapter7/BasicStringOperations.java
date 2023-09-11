@@ -30,5 +30,8 @@ public class BasicStringOperations {
 
         System.out.println(str1.equals(str2)); // false
         System.out.println(str1.equalsIgnoreCase(str2)); // true
+
+        boolean result = str1.regionMatches(6, str2, 2, 3);
+        System.out.println(result); // true
     }
 }
