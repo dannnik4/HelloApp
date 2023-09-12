@@ -37,5 +37,9 @@ public class BasicStringOperations {
 
         System.out.println(str1.compareTo(str2)); // -15 - str1 меньше чем strt2
         System.out.println(str1.compareTo(str3)); // 1 - str1 больше чем str3
+
+        int index1 = str.indexOf('l'); // 2
+        int index2 = str.indexOf("wo"); //6
+        int index3 = str.lastIndexOf('l'); //9
     }
 }
