@@ -42,8 +42,12 @@ public class BasicStringOperations {
         int index2 = str.indexOf("wo"); //6
         int index3 = str.lastIndexOf('l'); //9
 
-        String str = "myfile.exe";
-        boolean start = str.startsWith("my"); //true
-        boolean end = str.endsWith("exe"); //true
+//        String str = "myfile.exe";
+//        boolean start = str.startsWith("my"); //true
+//        boolean end = str.endsWith("exe"); //true
+
+        String str = "Hello world";
+        String replStr1 = str.replace('l', 'd'); // Heddo wordd
+        String replStr2 = str.replace("Hello", "Bye"); // Bye world
     }
 }
