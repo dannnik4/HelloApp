@@ -21,7 +21,7 @@ public class BasicStringOperations {
 //        char c = str.charAt(2);
 //        System.out.println(c); // v
 
-        String str = "Hello world!";
+//        String str = "Hello world!";
         int start = 6;
         int end = 11;
         char[] dst=new char[end - start];
@@ -41,5 +41,9 @@ public class BasicStringOperations {
         int index1 = str.indexOf('l'); // 2
         int index2 = str.indexOf("wo"); //6
         int index3 = str.lastIndexOf('l'); //9
+
+        String str = "myfile.exe";
+        boolean start = str.startsWith("my"); //true
+        boolean end = str.endsWith("exe"); //true
     }
 }
