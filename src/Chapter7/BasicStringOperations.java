@@ -50,7 +50,11 @@ public class BasicStringOperations {
 //        String replStr1 = str.replace('l', 'd'); // Heddo wordd
 //        String replStr2 = str.replace("Hello", "Bye"); // Bye world
 
-        String str = "  hello world  ";
-        str = str.trim(); // hello world
+//        String str = "  hello world  ";
+//        str = str.trim(); // hello world
+
+        String str = "Hello world";
+        String substr1 = str.substring(6); // world
+        String substr2 = str.substring(3,5); //lo
     }
 }
