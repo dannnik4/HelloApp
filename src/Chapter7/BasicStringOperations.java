@@ -60,5 +60,11 @@ public class BasicStringOperations {
         String str = "Hello World";
         System.out.println(str.toLowerCase()); // hello world
         System.out.println(str.toUpperCase()); // HELLO WORLD
+
+        String text = "FIFA will never regret it";
+        String[] words = text.split(" ");
+        for(String word : words){
+            System.out.println(word);
+        }
     }
 }
