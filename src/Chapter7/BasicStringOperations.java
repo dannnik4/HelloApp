@@ -53,8 +53,12 @@ public class BasicStringOperations {
 //        String str = "  hello world  ";
 //        str = str.trim(); // hello world
 
-        String str = "Hello world";
-        String substr1 = str.substring(6); // world
-        String substr2 = str.substring(3,5); //lo
+//        String str = "Hello world";
+//        String substr1 = str.substring(6); // world
+//        String substr2 = str.substring(3,5); //lo
+
+        String str = "Hello World";
+        System.out.println(str.toLowerCase()); // hello world
+        System.out.println(str.toUpperCase()); // HELLO WORLD
     }
 }
