@@ -46,8 +46,11 @@ public class BasicStringOperations {
 //        boolean start = str.startsWith("my"); //true
 //        boolean end = str.endsWith("exe"); //true
 
-        String str = "Hello world";
-        String replStr1 = str.replace('l', 'd'); // Heddo wordd
-        String replStr2 = str.replace("Hello", "Bye"); // Bye world
+//        String str = "Hello world";
+//        String replStr1 = str.replace('l', 'd'); // Heddo wordd
+//        String replStr2 = str.replace("Hello", "Bye"); // Bye world
+
+        String str = "  hello world  ";
+        str = str.trim(); // hello world
     }
 }
