@@ -8,5 +8,7 @@ public class StringBufferBuilder {
         strBuffer.ensureCapacity(32);
         System.out.println("Емкость: " + strBuffer.capacity()); // 42
         System.out.println("Длина: " + strBuffer.length()); // 4
+
+        System.out.println(strBuffer.toString()); // Java
     }
 }
