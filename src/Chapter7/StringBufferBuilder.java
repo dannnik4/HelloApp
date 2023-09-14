@@ -11,10 +11,17 @@ public class StringBufferBuilder {
 //
 //        System.out.println(strBuffer.toString()); // Java
 
-        StringBuffer strBuffer = new StringBuffer("Java");
-        char c = strBuffer.charAt(0); // J
-        System.out.println(c);
-        strBuffer.setCharAt(0, 'c');
-        System.out.println(strBuffer.toString()); // cava
+//        StringBuffer strBuffer = new StringBuffer("Java");
+//        char c = strBuffer.charAt(0); // J
+//        System.out.println(c);
+//        strBuffer.setCharAt(0, 'c');
+//        System.out.println(strBuffer.toString()); // cava
+
+        StringBuffer strBuffer = new StringBuffer("world");
+        int startIndex = 1;
+        int endIndex = 4;
+        char[] buffer = new char[endIndex-startIndex];
+        strBuffer.getChars(startIndex, endIndex, buffer, 0);
+        System.out.println(buffer); // orl
     }
 }
