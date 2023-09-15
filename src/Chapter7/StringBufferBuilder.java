@@ -24,8 +24,16 @@ public class StringBufferBuilder {
 //        strBuffer.getChars(startIndex, endIndex, buffer, 0);
 //        System.out.println(buffer); // orl
 
-        StringBuffer strBuffer = new StringBuffer("hello");
-        strBuffer.append(" world");
-        System.out.println(strBuffer.toString()); // hello world
+//        StringBuffer strBuffer = new StringBuffer("hello");
+//        strBuffer.append(" world");
+//        System.out.println(strBuffer.toString()); // hello world
+
+        StringBuffer strBuffer = new StringBuffer("word");
+
+        strBuffer.insert(3, 'l');
+        System.out.println(strBuffer.toString()); //world
+
+        strBuffer.insert(0, "s");
+        System.out.println(strBuffer.toString()); //sworld
     }
 }
