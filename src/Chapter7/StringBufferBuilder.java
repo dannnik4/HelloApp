@@ -28,12 +28,19 @@ public class StringBufferBuilder {
 //        strBuffer.append(" world");
 //        System.out.println(strBuffer.toString()); // hello world
 
-        StringBuffer strBuffer = new StringBuffer("word");
+//        StringBuffer strBuffer = new StringBuffer("word");
+//
+//        strBuffer.insert(3, 'l');
+//        System.out.println(strBuffer.toString()); //world
+//
+//        strBuffer.insert(0, "s");
+//        System.out.println(strBuffer.toString()); //sworld
 
-        strBuffer.insert(3, 'l');
-        System.out.println(strBuffer.toString()); //world
+        StringBuffer strBuffer = new StringBuffer("assembler");
+        strBuffer.delete(0,2);
+        System.out.println(strBuffer.toString()); //sembler
 
-        strBuffer.insert(0, "s");
-        System.out.println(strBuffer.toString()); //sworld
+        strBuffer.deleteCharAt(6);
+        System.out.println(strBuffer.toString()); //semble
     }
 }
