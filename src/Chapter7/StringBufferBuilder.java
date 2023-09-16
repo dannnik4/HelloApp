@@ -36,11 +36,11 @@ public class StringBufferBuilder {
 //        strBuffer.insert(0, "s");
 //        System.out.println(strBuffer.toString()); //sworld
 
-        StringBuffer strBuffer = new StringBuffer("assembler");
-        strBuffer.delete(0,2);
-        System.out.println(strBuffer.toString()); //sembler
-
-        strBuffer.deleteCharAt(6);
-        System.out.println(strBuffer.toString()); //semble
+//        StringBuffer strBuffer = new StringBuffer("assembler");
+//        strBuffer.delete(0,2);
+//        System.out.println(strBuffer.toString()); //sembler
+//
+//        strBuffer.deleteCharAt(6);
+//        System.out.println(strBuffer.toString()); //semble
     }
 }
