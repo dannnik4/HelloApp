@@ -42,5 +42,12 @@ public class StringBufferBuilder {
 //
 //        strBuffer.deleteCharAt(6);
 //        System.out.println(strBuffer.toString()); //semble
+
+        StringBuffer strBuffer = new StringBuffer("hello java!");
+        String str1 = strBuffer.substring(6); // обрезка строки с 6 символа до конца
+        System.out.println(str1); //java!
+
+        String str2 = strBuffer.substring(3, 9); // обрезка строки с 3 по 9 символ
+        System.out.println(str2); //lo jav
     }
 }
