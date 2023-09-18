@@ -57,8 +57,12 @@ public class StringBufferBuilder {
 //        strBuffer.setLength(4);
 //        System.out.println(strBuffer.toString()); //"hell"
 
-        StringBuffer strBuffer = new StringBuffer("hello world!");
-        strBuffer.replace(6,11,"java");
-        System.out.println(strBuffer.toString()); //hello java!
+//        StringBuffer strBuffer = new StringBuffer("hello world!");
+//        strBuffer.replace(6,11,"java");
+//        System.out.println(strBuffer.toString()); //hello java!
+
+        StringBuffer strBuffer = new StringBuffer("assembler");
+        strBuffer.reverse();
+        System.out.println(strBuffer.toString()); //relbmessa
     }
 }
