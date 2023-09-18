@@ -50,11 +50,15 @@ public class StringBufferBuilder {
 //        String str2 = strBuffer.substring(3, 9); // обрезка строки с 3 по 9 символ
 //        System.out.println(str2); //lo jav
 
-        StringBuffer strBuffer = new StringBuffer("hello");
-        strBuffer.setLength(10);
-        System.out.println(strBuffer.toString()); //"hello     "
+//        StringBuffer strBuffer = new StringBuffer("hello");
+//        strBuffer.setLength(10);
+//        System.out.println(strBuffer.toString()); //"hello     "
+//
+//        strBuffer.setLength(4);
+//        System.out.println(strBuffer.toString()); //"hell"
 
-        strBuffer.setLength(4);
-        System.out.println(strBuffer.toString()); //"hell"
+        StringBuffer strBuffer = new StringBuffer("hello world!");
+        strBuffer.replace(6,11,"java");
+        System.out.println(strBuffer.toString()); //hello java!
     }
 }
