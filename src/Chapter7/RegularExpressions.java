@@ -33,13 +33,19 @@ public class RegularExpressions {
 //        Pattern pattern = Pattern.compile("hello");
 //        Matcher matcher = pattern.matcher(input);
 
-        String input = "Hello";
-        Pattern pattern = Pattern.compile("Hello");
+//        String input = "Hello";
+//        Pattern pattern = Pattern.compile("Hello");
+//        Matcher matcher = pattern.matcher(input);
+//        boolean found = matcher.matches();
+//        if(found)
+//            System.out.println("Найдено");
+//        else
+//            System.out.println("Не найдено");
+
+        String input = "Hello Java! Hello JavaScript! JavaSE 8.";
+        Pattern pattern = Pattern.compile("Java(\\w*)");
         Matcher matcher = pattern.matcher(input);
-        boolean found = matcher.matches();
-        if(found)
-            System.out.println("Найдено");
-        else
-            System.out.println("Не найдено");
+        while(matcher.find())
+            System.out.println(matcher.group());
     }
 }
