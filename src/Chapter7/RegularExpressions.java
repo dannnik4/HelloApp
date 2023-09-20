@@ -1,5 +1,6 @@
 package Chapter7;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegularExpressions {
@@ -26,6 +27,10 @@ public class RegularExpressions {
 //        else
 //            System.out.println("Не найдено");
 
-        Pattern pattern = Pattern.compile("Hello");
+//        Pattern pattern = Pattern.compile("Hello");
+
+        String input = "Hello world! Hello Java!";
+        Pattern pattern = Pattern.compile("hello");
+        Matcher matcher = pattern.matcher(input);
     }
 }
