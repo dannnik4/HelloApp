@@ -29,8 +29,17 @@ public class RegularExpressions {
 
 //        Pattern pattern = Pattern.compile("Hello");
 
-        String input = "Hello world! Hello Java!";
-        Pattern pattern = Pattern.compile("hello");
+//        String input = "Hello world! Hello Java!";
+//        Pattern pattern = Pattern.compile("hello");
+//        Matcher matcher = pattern.matcher(input);
+
+        String input = "Hello";
+        Pattern pattern = Pattern.compile("Hello");
         Matcher matcher = pattern.matcher(input);
+        boolean found = matcher.matches();
+        if(found)
+            System.out.println("Найдено");
+        else
+            System.out.println("Не найдено");
     }
 }
