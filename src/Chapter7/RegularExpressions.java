@@ -19,11 +19,13 @@ public class RegularExpressions {
 //            System.out.println("It is not a phone number!");
 //        }
 
-        String input = "Hello";
-        boolean found = Pattern.matches("Hello", input);
-        if(found)
-            System.out.println("Найдено");
-        else
-            System.out.println("Не найдено");
+//        String input = "Hello";
+//        boolean found = Pattern.matches("Hello", input);
+//        if(found)
+//            System.out.println("Найдено");
+//        else
+//            System.out.println("Не найдено");
+
+        Pattern pattern = Pattern.compile("Hello");
     }
 }
