@@ -48,10 +48,14 @@ public class RegularExpressions {
 //        while(matcher.find())
 //            System.out.println(matcher.group());
 
+//        String input = "Hello Java! Hello JavaScript! JavaSE 8.";
+//        Pattern pattern = Pattern.compile("Java(\\w*)");
+//        Matcher matcher = pattern.matcher(input);
+//        String newStr = matcher.replaceAll("HTML");
+//        System.out.println(newStr); // Hello HTML! Hello HTML! HTML 8.
+
         String input = "Hello Java! Hello JavaScript! JavaSE 8.";
-        Pattern pattern = Pattern.compile("Java(\\w*)");
-        Matcher matcher = pattern.matcher(input);
-        String newStr = matcher.replaceAll("HTML");
-        System.out.println(newStr); // Hello HTML! Hello HTML! HTML 8.
+        String myStr =input.replaceAll("Java(\\w*)", "HTML");
+        System.out.println(myStr); // Hello HTML! Hello HTML! HTML 8.
     }
 }
