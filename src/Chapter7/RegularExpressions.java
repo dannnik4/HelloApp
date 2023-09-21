@@ -42,10 +42,16 @@ public class RegularExpressions {
 //        else
 //            System.out.println("Не найдено");
 
+//        String input = "Hello Java! Hello JavaScript! JavaSE 8.";
+//        Pattern pattern = Pattern.compile("Java(\\w*)");
+//        Matcher matcher = pattern.matcher(input);
+//        while(matcher.find())
+//            System.out.println(matcher.group());
+
         String input = "Hello Java! Hello JavaScript! JavaSE 8.";
         Pattern pattern = Pattern.compile("Java(\\w*)");
         Matcher matcher = pattern.matcher(input);
-        while(matcher.find())
-            System.out.println(matcher.group());
+        String newStr = matcher.replaceAll("HTML");
+        System.out.println(newStr); // Hello HTML! Hello HTML! HTML 8.
     }
 }
