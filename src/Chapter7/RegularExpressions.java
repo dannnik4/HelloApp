@@ -54,8 +54,14 @@ public class RegularExpressions {
 //        String newStr = matcher.replaceAll("HTML");
 //        System.out.println(newStr); // Hello HTML! Hello HTML! HTML 8.
 
+//        String input = "Hello Java! Hello JavaScript! JavaSE 8.";
+//        String myStr =input.replaceAll("Java(\\w*)", "HTML");
+//        System.out.println(myStr); // Hello HTML! Hello HTML! HTML 8.
+
         String input = "Hello Java! Hello JavaScript! JavaSE 8.";
-        String myStr =input.replaceAll("Java(\\w*)", "HTML");
-        System.out.println(myStr); // Hello HTML! Hello HTML! HTML 8.
+        Pattern pattern = Pattern.compile("[ ,.!?]");
+        String[] words = pattern.split(input);
+        for(String word:words)
+            System.out.println(word);
     }
 }
