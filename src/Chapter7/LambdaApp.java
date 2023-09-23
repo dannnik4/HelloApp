@@ -1,5 +1,9 @@
 package Chapter7;
 
+interface Printable{
+    void print(String s);
+}
+
 public class LambdaApp {
     public static void main(String[] args) {
 
@@ -14,17 +18,22 @@ public class LambdaApp {
 //    int calculate(int x, int y);
 //}
 
-        Operationable op = new Operationable(){
+//        Operationable op = new Operationable(){
+//
+//            public int calculate(int x, int y){
+//
+//                return x + y;
+//            }
+//        };
+//        int z = op.calculate(20, 10);
+//        System.out.println(z); // 30
+//    }
+//}
+//interface Operationable{
+//    int calculate(int x, int y);
+//}
 
-            public int calculate(int x, int y){
-
-                return x + y;
-            }
-        };
-        int z = op.calculate(20, 10);
-        System.out.println(z); // 30
+        Printable printer = s -> System.out.println(s);
+        printer.print("Hello Java!");
     }
-}
-interface Operationable{
-    int calculate(int x, int y);
 }
