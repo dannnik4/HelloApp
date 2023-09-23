@@ -5,8 +5,8 @@ package Chapter7;
 //}
 
 public class LambdaApp {
-    static int x = 10;
-    static int y = 20;
+//    static int x = 10;
+//    static int y = 20;
 
     public static void main(String[] args) {
 
@@ -40,16 +40,32 @@ public class LambdaApp {
 //        printer.print("Hello Java!");
 //    }
 
+//        Operation op = () -> {
+//
+//            x = 30;
+//            return x + y;
+//        };
+//        System.out.println(op.calculate()); // 50
+//        System.out.println(x); // 30 - значение x изменилось
+//    }
+//}
+//
+//interface Operation {
+//    int calculate();
+//}
+
+        int n = 70;
+        int m = 30;
         Operation op = () -> {
 
-            x = 30;
-            return x + y;
+            //n=100; - так нельзя сделать
+            return m + n;
         };
-        System.out.println(op.calculate()); // 50
-        System.out.println(x); // 30 - значение x изменилось
+        // n=100;  - так тоже нельзя
+        System.out.println(op.calculate()); // 100
     }
-}
 
-interface Operation {
+}
+interface Operation{
     int calculate();
 }
