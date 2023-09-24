@@ -70,19 +70,29 @@ public class LambdaApp {
 //    int calculate();
 //}
 
-        Operationable operation = (int x, int y) -> {
+//        Operationable operation = (int x, int y) -> {
+//
+//            if (y == 0)
+//                return 0;
+//            else
+//                return x / y;
+//        };
+//
+//        System.out.println(operation.calculate(20, 10)); //2
+//        System.out.println(operation.calculate(20, 0)); //0
+//
+//    interface Operationable {
+//        int calculate(int x, int y);
+//    }
 
-            if (y == 0)
-                return 0;
-            else
-                return x / y;
-        };
+        Operationable<Integer> operation1 = (x, y)-> x + y;
+        Operationable<String> operation2 = (x, y) -> x + y;
 
-        System.out.println(operation.calculate(20, 10)); //2
-        System.out.println(operation.calculate(20, 0)); //0
+        System.out.println(operation1.calculate(20, 10)); //30
+        System.out.println(operation2.calculate("20", "10")); //2010
     }
 
-    interface Operationable {
-        int calculate(int x, int y);
+    interface Operationable<T>{
+        T calculate(T x, T y);
     }
 }
