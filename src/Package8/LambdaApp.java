@@ -1,4 +1,4 @@
-package Chapter7;
+package Package8;
 
 //interface Printable{
 //    void print(String s);
