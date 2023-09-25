@@ -85,34 +85,14 @@ public class LambdaApp {
 //        int calculate(int x, int y);
 //    }
 
-//        Operationable<Integer> operation1 = (x, y)-> x + y;
-//        Operationable<String> operation2 = (x, y) -> x + y;
-//
-//        System.out.println(operation1.calculate(20, 10)); //30
-//        System.out.println(operation2.calculate("20", "10")); //2010
-//    }
-//
-//    interface Operationable<T>{
-//        T calculate(T x, T y);
-//    }
-//}
+        Operationable<Integer> operation1 = (x, y)-> x + y;
+        Operationable<String> operation2 = (x, y) -> x + y;
 
-
-        Expression func = (n) -> n % 2 == 0;
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(sum(nums, func)); // 20
+        System.out.println(operation1.calculate(20, 10)); //30
+        System.out.println(operation2.calculate("20", "10")); //2010
     }
 
-    private static int sum(int[] numbers, Expression func) {
-        int result = 0;
-        for (int i : numbers) {
-            if (func.isEqual(i))
-                result += i;
-        }
-        return result;
+    interface Operationable<T>{
+        T calculate(T x, T y);
     }
-}
-
-interface Expression {
-    boolean isEqual(int n);
 }
