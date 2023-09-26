@@ -3,14 +3,37 @@ package Package8;
 public class LambdaApp2 {
     public static void main(String[] args) {
 
-        Expression func = (n) -> n % 2 == 0;
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(sum(nums, func)); // 20
+//        Expression func = (n) -> n % 2 == 0;
+//        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+//        System.out.println(sum(nums, func)); // 20
+//    }
+//
+//    private static int sum(int[] numbers, Expression func) {
+//        int result = 0;
+//        for (int i : numbers) {
+//            if (func.isEqual(i))
+//                result += i;
+//        }
+//        return result;
+//    }
+//}
+//
+//interface Expression {
+//    boolean isEqual(int n);
+//}
+
+        int[] nums = { -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
+        System.out.println(sum(nums, ExpressionHelper::isEven));
+
+        Expression expr = ExpressionHelper::isPositive;
+        System.out.println(sum(nums, expr));
     }
 
-    private static int sum(int[] numbers, Expression func) {
+    private static int sum (int[] numbers, Expression func)
+    {
         int result = 0;
-        for (int i : numbers) {
+        for(int i : numbers)
+        {
             if (func.isEqual(i))
                 result += i;
         }
@@ -18,6 +41,20 @@ public class LambdaApp2 {
     }
 }
 
-interface Expression {
+// функциональный интерфейс
+interface Expression{
     boolean isEqual(int n);
+}
+// класс, в котором определены методы
+class ExpressionHelper{
+
+    static boolean isEven(int n){
+
+        return n%2 == 0;
+    }
+
+    static boolean isPositive(int n){
+
+        return n > 0;
+    }
 }
