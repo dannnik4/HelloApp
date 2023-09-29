@@ -12,6 +12,9 @@ public class LambdaApp3 {
 
         System.out.println(multiply.apply(3, 5)); // 15
         System.out.println(multiply.apply(10, -2)); // -20
+
+        UnaryOperator<Integer> square = x -> x*x;
+        System.out.println(square.apply(5)); // 25
     }
 }
 
@@ -21,4 +24,8 @@ interface Predicate<T> {
 
 interface BinaryOperator<T> {
     T apply(T t1, T t2);
+}
+
+interface UnaryOperator<T> {
+    T apply(T t);
 }
