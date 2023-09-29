@@ -15,6 +15,9 @@ public class LambdaApp3 {
 
         UnaryOperator<Integer> square = x -> x*x;
         System.out.println(square.apply(5)); // 25
+
+        Function<Integer, String> convert = x-> String.valueOf(x) + " долларов";
+        System.out.println(convert.apply(5)); // 5 долларов
     }
 }
 
@@ -28,4 +31,8 @@ interface BinaryOperator<T> {
 
 interface UnaryOperator<T> {
     T apply(T t);
+}
+
+interface Function<T, R> {
+    R apply(T t);
 }
