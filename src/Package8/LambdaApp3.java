@@ -1,5 +1,7 @@
 package Package8;
 
+import java.util.Scanner;
+
 public class LambdaApp3 {
     public static void main(String[] args) {
 
@@ -21,6 +23,20 @@ public class LambdaApp3 {
 
         Consumer<Integer> printer = x-> System.out.printf("%d долларов \n", x);
         printer.accept(600); // 600 долларов
+
+        Supplier<User> userFactory = ()->{
+
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите имя: ");
+            String name = in.nextLine();
+            return new User(name);
+        };
+
+        User user1 = userFactory.get();
+        User user2 = userFactory.get();
+
+        System.out.println("Имя user1: " + user1.getName());
+        System.out.println("Имя user2: " + user2.getName());
     }
 }
 
@@ -42,4 +58,20 @@ interface Function<T, R> {
 
 interface Consumer<T> {
     void accept(T t);
+}
+
+interface Supplier<T> {
+    T get();
+}
+
+class User{
+
+    private String name;
+    String getName(){
+        return name;
+    }
+
+    User(String n){
+        this.name=n;
+    }
 }
