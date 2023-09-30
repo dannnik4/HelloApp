@@ -18,6 +18,9 @@ public class LambdaApp3 {
 
         Function<Integer, String> convert = x-> String.valueOf(x) + " долларов";
         System.out.println(convert.apply(5)); // 5 долларов
+
+        Consumer<Integer> printer = x-> System.out.printf("%d долларов \n", x);
+        printer.accept(600); // 600 долларов
     }
 }
 
@@ -35,4 +38,8 @@ interface UnaryOperator<T> {
 
 interface Function<T, R> {
     R apply(T t);
+}
+
+interface Consumer<T> {
+    void accept(T t);
 }
