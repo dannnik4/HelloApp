@@ -1,4 +1,4 @@
-package Package8;
+package Chapter8;
 
 public class LambdaApp2 {
     public static void main(String[] args) {
