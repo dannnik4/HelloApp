@@ -6,16 +6,15 @@ public class TerminatingThread extends Thread {
 
         System.out.println("Main thread started...");
         MyThread myThread = new MyThread();
-        new Thread(myThread,"MyThread").start();
+        new Thread(myThread, "MyThread").start();
 
-        try{
+        try {
             Thread.sleep(1100);
 
             myThread.disable();
 
             Thread.sleep(1000);
-        }
-        catch(InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println("Thread has been interrupted");
         }
         System.out.println("Main thread finished...");
@@ -25,39 +24,48 @@ public class TerminatingThread extends Thread {
 
         private boolean isActive;
 
-        void disable(){
-            isActive=false;
+        void disable() {
+            isActive = false;
         }
 
-        MyThread(){
+        MyThread() {
             isActive = true;
         }
 
-        public void run(){
+        public void run() {
+
+//            System.out.printf("%s started... \n", Thread.currentThread().getName());
+//            int counter=1; // счетчик циклов
+//            while(isActive){
+//                System.out.println("Loop " + counter++);
+//                try{
+//                    Thread.sleep(400);
+//                }
+//                catch(InterruptedException e){
+//                    System.out.println("Thread has been interrupted");
+//                }
+//            }
+//            System.out.printf("%s finished... \n", Thread.currentThread().getName());
 
             System.out.printf("%s started... \n", Thread.currentThread().getName());
-            int counter=1; // счетчик циклов
-            while(isActive){
+            int counter = 1; // счетчик циклов
+            while (!Thread.currentThread().isInterrupted()) {
+
                 System.out.println("Loop " + counter++);
-                try{
-                    Thread.sleep(400);
-                }
-                catch(InterruptedException e){
-                    System.out.println("Thread has been interrupted");
-                }
             }
             System.out.printf("%s finished... \n", Thread.currentThread().getName());
         }
     }
 
-    TerminatingThread(String name){
+    TerminatingThread(String name) {
         super(name);
     }
-    public void run(){
+
+    public void run() {
 
         System.out.printf("%s started... \n", Thread.currentThread().getName());
-        int counter=1; // счетчик циклов
-        while(!isInterrupted()){
+        int counter = 1; // счетчик циклов
+        while (!isInterrupted()) {
 
             System.out.println("Loop " + counter++);
         }
@@ -73,13 +81,12 @@ class Program1 {
         System.out.println("Main thread started...");
         TerminatingThread t = new TerminatingThread("JThread");
         t.start();
-        try{
+        try {
             Thread.sleep(150);
             t.interrupt();
 
             Thread.sleep(150);
-        }
-        catch(InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println("Thread has been interrupted");
         }
         System.out.println("Main thread finished...");
