@@ -71,11 +71,11 @@ public class TerminatingThread extends Thread {
 //        }
 //        System.out.printf("%s finished... \n", Thread.currentThread().getName());
 
-        System.out.printf("%s started... \n", Thread.currentThread().getName());
-        int counter=1; // счетчик циклов
-        while(!isInterrupted()){
-
-            System.out.println("Loop " + counter++);
+//        System.out.printf("%s started... \n", Thread.currentThread().getName());
+//        int counter=1; // счетчик циклов
+//        while(!isInterrupted()){
+//
+//            System.out.println("Loop " + counter++);
 //            try{
 //                Thread.sleep(100);
 //            }
@@ -84,21 +84,35 @@ public class TerminatingThread extends Thread {
 //                System.out.println(isInterrupted());    // false
 //                interrupt();    // повторно сбрасываем состояние
 
+//            while(!isInterrupted()){
+//
+//                System.out.println("Loop " + counter++);
+//                try{
+//                    Thread.sleep(100);
+//                }
+//                catch(InterruptedException e){
+//                    System.out.println(getName() + " has been interrupted");
+//
+//                    break;  // выход из цикла
+//                }
+//            }
+//        }
+//        System.out.printf("%s finished... \n", Thread.currentThread().getName());
+//    }
+
+        System.out.printf("%s started... \n", Thread.currentThread().getName());
+        int counter=1; // счетчик циклов
+        try{
             while(!isInterrupted()){
-
                 System.out.println("Loop " + counter++);
-                try{
-                    Thread.sleep(100);
-                }
-                catch(InterruptedException e){
-                    System.out.println(getName() + " has been interrupted");
-
-                    break;  // выход из цикла
-                }
+                Thread.sleep(100);
             }
         }
+        catch(InterruptedException e){
+            System.out.println(getName() + " has been interrupted");
+        }
+
         System.out.printf("%s finished... \n", Thread.currentThread().getName());
-    }
 }
 
 
