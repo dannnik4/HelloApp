@@ -76,13 +76,26 @@ public class TerminatingThread extends Thread {
         while(!isInterrupted()){
 
             System.out.println("Loop " + counter++);
-            try{
-                Thread.sleep(100);
+//            try{
+//                Thread.sleep(100);
+//            }
+//            catch(InterruptedException e){
+//                System.out.println(getName() + " has been interrupted");
+//                System.out.println(isInterrupted());    // false
+//                interrupt();    // повторно сбрасываем состояние
+
+            while(!isInterrupted()){
+
+                System.out.println("Loop " + counter++);
+                try{
+                    Thread.sleep(100);
+                }
+                catch(InterruptedException e){
+                    System.out.println(getName() + " has been interrupted");
+
+                    break;  // выход из цикла
+                }
             }
-            catch(InterruptedException e){
-                System.out.println(getName() + " has been interrupted");
-                System.out.println(isInterrupted());    // false
-                interrupt();    // повторно сбрасываем состояние
             }
         }
         System.out.printf("%s finished... \n", Thread.currentThread().getName());
