@@ -96,7 +96,6 @@ public class TerminatingThread extends Thread {
                     break;  // выход из цикла
                 }
             }
-            }
         }
         System.out.printf("%s finished... \n", Thread.currentThread().getName());
     }
