@@ -101,36 +101,36 @@ public class TerminatingThread extends Thread {
 //    }
 
         System.out.printf("%s started... \n", Thread.currentThread().getName());
-        int counter=1; // счетчик циклов
-        try{
-            while(!isInterrupted()){
+        int counter = 1; // счетчик циклов
+        try {
+            while (!isInterrupted()) {
                 System.out.println("Loop " + counter++);
                 Thread.sleep(100);
             }
-        }
-        catch(InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println(getName() + " has been interrupted");
         }
 
         System.out.printf("%s finished... \n", Thread.currentThread().getName());
-}
+    }
 
 
-class Program1 {
+    class Program1 {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        System.out.println("Main thread started...");
-        TerminatingThread t = new TerminatingThread("JThread");
-        t.start();
-        try {
-            Thread.sleep(150);
-            t.interrupt();
+            System.out.println("Main thread started...");
+            TerminatingThread t = new TerminatingThread("JThread");
+            t.start();
+            try {
+                Thread.sleep(150);
+                t.interrupt();
 
-            Thread.sleep(150);
-        } catch (InterruptedException e) {
-            System.out.println("Thread has been interrupted");
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                System.out.println("Thread has been interrupted");
+            }
+            System.out.println("Main thread finished...");
         }
-        System.out.println("Main thread finished...");
     }
 }
