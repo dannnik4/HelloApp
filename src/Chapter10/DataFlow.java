@@ -17,5 +17,9 @@ public class DataFlow {
         Stream<String> citiesStream = cities.stream(); // получаем поток
         citiesStream = citiesStream.filter(s->s.length()==6); // применяем фильтрацию по длине строки
         citiesStream.forEach(System.out::println); // выводим отфильтрованные строки на консоль
+
+        long number = citiesStream.count(); // здесь ошибка, так как поток уже употреблен
+        System.out.println(number);
+        citiesStream = citiesStream.filter(s->s.length()>5); // тоже нельзя, так как поток уже употреблен
     }
 }
