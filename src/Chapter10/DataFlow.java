@@ -29,6 +29,10 @@ public class DataFlow {
         Stream<String> citiesStream = Arrays.stream(new String[]{"Париж", "Лондон", "Мадрид"}) ;
         citiesStream.forEach(System.out::println); // выводим все элементы массива
 
+        // можно передать массив
+        String[] cities = {"Париж", "Лондон", "Мадрид"};
+        Stream<String> citiesStream2 =Stream.of(cities);
+
         IntStream intStream = Arrays.stream(new int[]{1,2,4,5,7});
         intStream.forEach(System.out::println);
 
