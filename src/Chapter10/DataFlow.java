@@ -3,6 +3,9 @@ package Chapter10;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 public class DataFlow {
@@ -25,5 +28,14 @@ public class DataFlow {
 
         Stream<String> citiesStream = Arrays.stream(new String[]{"Париж", "Лондон", "Мадрид"}) ;
         citiesStream.forEach(System.out::println); // выводим все элементы массива
+
+        IntStream intStream = Arrays.stream(new int[]{1,2,4,5,7});
+        intStream.forEach(System.out::println);
+
+        LongStream longStream = Arrays.stream(new long[]{100,250,400,5843787,237});
+        longStream.forEach(System.out::println);
+
+        DoubleStream doubleStream = Arrays.stream(new double[] {3.4, 6.7, 9.5, 8.2345, 121});
+        doubleStream.forEach(System.out::println);
     }
 }
