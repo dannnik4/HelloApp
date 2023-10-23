@@ -18,8 +18,12 @@ public class FilteringDisplay {
         Stream<Phone> phoneStream = Stream.of(new Phone("iPhone 6 S", 54000), new Phone("Lumia 950", 45000),
                 new Phone("Samsung Galaxy S 6", 40000));
 
+//        phoneStream
+//                .map(p-> p.getName()) // помещаем в поток только названия телефонов
+//                .forEach(s->System.out.println(s));
+
         phoneStream
-                .map(p-> p.getName()) // помещаем в поток только названия телефонов
+                .map(p-> "название: " + p.getName() + " цена: " + p.getPrice())
                 .forEach(s->System.out.println(s));
     }
 
