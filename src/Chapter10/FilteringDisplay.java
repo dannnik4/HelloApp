@@ -15,15 +15,25 @@ public class FilteringDisplay {
 //
 //        phoneStream.filter(p->p.getPrice()<50000).forEach(p->System.out.println(p.getName()));
 
-        Stream<Phone> phoneStream = Stream.of(new Phone("iPhone 6 S", 54000), new Phone("Lumia 950", 45000),
-                new Phone("Samsung Galaxy S 6", 40000));
+//        Stream<Phone> phoneStream = Stream.of(new Phone("iPhone 6 S", 54000), new Phone("Lumia 950", 45000),
+//                new Phone("Samsung Galaxy S 6", 40000));
 
 //        phoneStream
 //                .map(p-> p.getName()) // помещаем в поток только названия телефонов
 //                .forEach(s->System.out.println(s));
 
+//        phoneStream
+//                .map(p-> "название: " + p.getName() + " цена: " + p.getPrice())
+//                .forEach(s->System.out.println(s));
+
+        Stream<Phone> phoneStream = Stream.of(new Phone("iPhone 6 S", 54000), new Phone("Lumia 950", 45000),
+                new Phone("Samsung Galaxy S 6", 40000));
+
         phoneStream
-                .map(p-> "название: " + p.getName() + " цена: " + p.getPrice())
+                .flatMap(p->Stream.of(
+                        String.format("название: %s  цена без скидки: %d", p.getName(), p.getPrice()),
+                        String.format("название: %s  цена со скидкой: %d", p.getName(), p.getPrice() - (int)(p.getPrice()*0.1))
+                ))
                 .forEach(s->System.out.println(s));
     }
 
