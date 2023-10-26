@@ -18,4 +18,21 @@ public class Sorting {
                 .sorted() // сортировка по возрастанию
                 .forEach(System.out::println);
     }
+    static class Phone{
+
+        private String name;
+        private String company;
+        private int price;
+
+        public Phone(String name, String comp, int price){
+            this.name=name;
+            this.company=comp;
+            this.price = price;
+        }
+
+        public String getName() { return name; }
+        public int getPrice() { return price; }
+        public String getCompany() { return company; }
+    }
+
 }
