@@ -21,5 +21,8 @@ public class Subflow {
         Stream<String> people2 = Stream.of("Alice", "Kate", "Sam");
 
         Stream.concat(people1, people2).forEach(System.out::println);
+
+        Stream<String> people = Stream.of("Tom", "Bob", "Sam", "Tom", "Alice", "Kate", "Sam");
+        people.distinct().forEach(System.out::println);
     }
 }
