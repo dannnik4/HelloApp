@@ -20,18 +20,26 @@ public class MixingOperations {
 //        Optional<String> any = names.stream().findAny();
 //        System.out.println(first.get());    // Tom
 
-        ArrayList<String> names = new ArrayList<String>(Arrays.asList(new String[]{"Tom", "Sam", "Bob", "Alice"}));
+//        ArrayList<String> names = new ArrayList<String>(Arrays.asList(new String[]{"Tom", "Sam", "Bob", "Alice"}));
+//
+//        // есть ли в потоке строка, длина которой больше 3
+//        boolean any = names.stream().anyMatch(s->s.length()>3);
+//        System.out.println(any);    // true
+//
+//        // все ли строки имеют длину в 3 символа
+//        boolean all = names.stream().allMatch(s->s.length()==3);
+//        System.out.println(all);    // false
+//
+//        // НЕТ ЛИ в потоке строки "Bill". Если нет, то true, если есть, то false
+//        boolean none = names.stream().noneMatch(s->s=="Bill");
+//        System.out.println(none);   // true
 
-        // есть ли в потоке строка, длина которой больше 3
-        boolean any = names.stream().anyMatch(s->s.length()>3);
-        System.out.println(any);    // true
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.addAll(Arrays.asList(new Integer[]{1,2,3,4,5,6,7,8,9}));
 
-        // все ли строки имеют длину в 3 символа
-        boolean all = names.stream().allMatch(s->s.length()==3);
-        System.out.println(all);    // false
-
-        // НЕТ ЛИ в потоке строки "Bill". Если нет, то true, если есть, то false
-        boolean none = names.stream().noneMatch(s->s=="Bill");
-        System.out.println(none);   // true
+        Optional<Integer> min = numbers.stream().min(Integer::compare);
+        Optional<Integer> max = numbers.stream().max(Integer::compare);
+        System.out.println(min.get());  // 1
+        System.out.println(max.get());  // 9
     }
 }
