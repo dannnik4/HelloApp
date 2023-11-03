@@ -13,5 +13,10 @@ public class ReduceMethod {
         Stream<String> wordsStream = Stream.of("мама", "мыла", "раму");
         Optional<String> sentence = wordsStream.reduce((x,y)->x + " " + y);
         System.out.println(sentence.get());
+
+        Stream<Integer> numberStream = Stream.of(-4, 3, -2, 1);
+        int identity = 1;
+        result = Optional.of(numberStream.reduce(identity, (x, y) -> x * y));
+        System.out.println(result);  // 24
     }
 }
