@@ -12,11 +12,21 @@ public class OptionalType {
 //        Optional<Integer> min = numbers.stream().min(Integer::compare);
 //        System.out.println(min.get());  // 1
 
+//        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//        Optional<Integer> min = numbers.stream().min(Integer::compare);
+//        if(min.isPresent()){
+//
+//            System.out.println(min.get());
+//        }
+
+        // пустой список
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         Optional<Integer> min = numbers.stream().min(Integer::compare);
-        if(min.isPresent()){
+        System.out.println(min.orElse(-1)); // -1
 
-            System.out.println(min.get());
-        }
+        // непустой список
+        numbers.addAll(Arrays.asList(new Integer[]{4,5,6,7,8,9}));
+        min = numbers.stream().min(Integer::compare);
+        System.out.println(min.orElse(-1)); // 4
     }
 }
