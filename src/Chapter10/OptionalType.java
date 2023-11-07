@@ -40,9 +40,16 @@ public class OptionalType {
 //        // генеррация исключения IllegalStateException
 //        System.out.println(min.orElseThrow(IllegalStateException::new));
 
+//        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//        numbers.addAll(Arrays.asList(new Integer[]{4,5,6,7,8,9}));
+//        Optional<Integer> min = numbers.stream().min(Integer::compare);
+//        min.ifPresent(v->System.out.println(v)); // 4
+
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-        numbers.addAll(Arrays.asList(new Integer[]{4,5,6,7,8,9}));
         Optional<Integer> min = numbers.stream().min(Integer::compare);
-        min.ifPresent(v->System.out.println(v)); // 4
+        min.ifPresentOrElse(
+                v -> System.out.println(v),
+                () -> System.out.println("Value not found")
+        );
     }
 }
