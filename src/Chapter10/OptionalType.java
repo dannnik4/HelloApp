@@ -35,9 +35,14 @@ public class OptionalType {
 //        Random rnd = new Random();
 //        System.out.println(min.orElseGet(()->rnd.nextInt(100)));
 
+//        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//        Optional<Integer> min = numbers.stream().min(Integer::compare);
+//        // генеррация исключения IllegalStateException
+//        System.out.println(min.orElseThrow(IllegalStateException::new));
+
         ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.addAll(Arrays.asList(new Integer[]{4,5,6,7,8,9}));
         Optional<Integer> min = numbers.stream().min(Integer::compare);
-        // генеррация исключения IllegalStateException
-        System.out.println(min.orElseThrow(IllegalStateException::new));
+        min.ifPresent(v->System.out.println(v)); // 4
     }
 }
