@@ -3,6 +3,7 @@ package Chapter10;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CollectMethod {
@@ -13,9 +14,13 @@ public class CollectMethod {
                 "Samsung Galaxy S9", "LG G6", "Xiaomi MI6", "ASUS Zenfone 2",
                 "Sony Xperia Z5", "Meizu Pro 6", "Lenovo S850");
 
-        List<String> filteredPhones = phones.stream()
+//        List<String> filteredPhones = phones.stream()
+//                .filter(s->s.length()<10)
+//                .collect(Collectors.toList());
+
+        Set<String> filteredPhones = phones.stream()
                 .filter(s->s.length()<10)
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
 
         for(String s : filteredPhones){
             System.out.println(s);
