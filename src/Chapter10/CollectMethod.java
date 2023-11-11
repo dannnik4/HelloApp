@@ -24,16 +24,25 @@ public class CollectMethod {
 //            System.out.println(s);
 //        }
 
-        Stream<Phone3> phoneStream = Stream.of(new Phone3("iPhone 8", 54000),
-                new Phone3("Nokia 9", 45000),
-                new Phone3("Samsung Galaxy S9", 40000),
-                new Phone3("LG G6", 32000));
+//        Stream<Phone3> phoneStream = Stream.of(new Phone3("iPhone 8", 54000),
+//                new Phone3("Nokia 9", 45000),
+//                new Phone3("Samsung Galaxy S9", 40000),
+//                new Phone3("LG G6", 32000));
+//
+//
+//        Map<String, Integer> phones = phoneStream
+//                .collect(Collectors.toMap(p->p.getName(), t->t.getPrice()));
+//
+//        phones.forEach((k,v)->System.out.println(k + " " + v));
 
+        Stream<String> phones3 = Stream.of("iPhone 8", "HTC U12", "Huawei Nexus 6P",
+                "Samsung Galaxy S9", "LG G6", "Xiaomi MI6", "ASUS Zenfone 2",
+                "Sony Xperia Z5", "Meizu Pro 6", "Lenovo S850");
 
-        Map<String, Integer> phones = phoneStream
-                .collect(Collectors.toMap(p->p.getName(), t->t.getPrice()));
+        HashSet<String> filteredPhones = phones3.filter(s->s.length()<12).
+                collect(Collectors.toCollection(HashSet::new));
 
-        phones.forEach((k,v)->System.out.println(k + " " + v));
+        filteredPhones.forEach(s->System.out.println(s));
     }
     class Phone3{
 
