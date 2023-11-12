@@ -35,12 +35,24 @@ public class CollectMethod {
 //
 //        phones.forEach((k,v)->System.out.println(k + " " + v));
 
+//        Stream<String> phones3 = Stream.of("iPhone 8", "HTC U12", "Huawei Nexus 6P",
+//                "Samsung Galaxy S9", "LG G6", "Xiaomi MI6", "ASUS Zenfone 2",
+//                "Sony Xperia Z5", "Meizu Pro 6", "Lenovo S850");
+//
+//        HashSet<String> filteredPhones = phones3.filter(s->s.length()<12).
+//                collect(Collectors.toCollection(HashSet::new));
+//
+//        filteredPhones.forEach(s->System.out.println(s));
+
         Stream<String> phones3 = Stream.of("iPhone 8", "HTC U12", "Huawei Nexus 6P",
                 "Samsung Galaxy S9", "LG G6", "Xiaomi MI6", "ASUS Zenfone 2",
                 "Sony Xperia Z5", "Meizu Pro 6", "Lenovo S850");
 
-        HashSet<String> filteredPhones = phones3.filter(s->s.length()<12).
-                collect(Collectors.toCollection(HashSet::new));
+        ArrayList<String> filteredPhones = phones3.filter(s->s.length()<12)
+                .collect(
+                        ()->new ArrayList<String>(), // создаем ArrayList
+                        (list, item)->list.add(item), // добавляем в список элемент
+                        (list1, list2)-> list1.addAll(list2)); // добавляем в список другой список
 
         filteredPhones.forEach(s->System.out.println(s));
     }
