@@ -8,21 +8,21 @@ import java.util.stream.Stream;
 public class Grouping {
     public static void main(String[] args) {
 
-        Stream<Phone> phoneStream = Stream.of(new Phone("iPhone X", "Apple", 600),
-                new Phone("Pixel 2", "Google", 500),
-                new Phone("iPhone 8", "Apple",450),
-                new Phone("Galaxy S9", "Samsung", 440),
-                new Phone("Galaxy S8", "Samsung", 340));
+        Stream<Phone3> phoneStream = Stream.of(new Phone3("iPhone X", "Apple", 600),
+                new Phone3("Pixel 2", "Google", 500),
+                new Phone3("iPhone 8", "Apple",450),
+                new Phone3("Galaxy S9", "Samsung", 440),
+                new Phone3("Galaxy S8", "Samsung", 340));
 
-        Map<String, List<Phone>> phonesByCompany = phoneStream.collect(
-                Collectors.groupingBy(Phone::getCompany));
+        Map<String, List<Phone3>> phonesByCompany = phoneStream.collect(
+                Collectors.groupingBy(Phone3::getCompany));
 
-        for(Map.Entry<String, List<Phone>> item : phonesByCompany.entrySet()){
+        for(Map.Entry<String, List<Phone3>> item : phonesByCompany.entrySet()){
 
             System.out.println(item.getKey());
-            for(Phone phone : item.getValue()){
+            for(Phone3 phone3 : item.getValue()){
 
-                System.out.println(phone.getName());
+                System.out.println(phone3.getName());
             }
             System.out.println();
         }
