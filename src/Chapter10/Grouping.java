@@ -14,15 +14,28 @@ public class Grouping {
                 new Phone3("Galaxy S9", "Samsung", 440),
                 new Phone3("Galaxy S8", "Samsung", 340));
 
-        Map<String, List<Phone3>> phonesByCompany = phoneStream.collect(
-                Collectors.groupingBy(Phone3::getCompany));
+//        Map<String, List<Phone3>> phonesByCompany = phoneStream.collect(
+//                Collectors.groupingBy(Phone3::getCompany));
+//
+//        for(Map.Entry<String, List<Phone3>> item : phonesByCompany.entrySet()){
+//
+//            System.out.println(item.getKey());
+//            for(Phone3 phone3 : item.getValue()){
+//
+//                System.out.println(phone3.getName());
+//            }
+//            System.out.println();
+//        }
 
-        for(Map.Entry<String, List<Phone3>> item : phonesByCompany.entrySet()){
+        Map<Boolean, List<Phone3>> phonesByCompany = phoneStream.collect(
+                Collectors.partitioningBy(p->p.getCompany()=="Apple"));
+
+        for(Map.Entry<Boolean, List<Phone3>> item : phonesByCompany.entrySet()){
 
             System.out.println(item.getKey());
-            for(Phone3 phone3 : item.getValue()){
+            for(Phone3 phone : item.getValue()){
 
-                System.out.println(phone3.getName());
+                System.out.println(phone.getName());
             }
             System.out.println();
         }
