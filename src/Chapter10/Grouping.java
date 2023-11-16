@@ -27,17 +27,25 @@ public class Grouping {
 //            System.out.println();
 //        }
 
-        Map<Boolean, List<Phone3>> phonesByCompany = phoneStream.collect(
-                Collectors.partitioningBy(p->p.getCompany()=="Apple"));
+//        Map<Boolean, List<Phone3>> phonesByCompany = phoneStream.collect(
+//                Collectors.partitioningBy(p->p.getCompany()=="Apple"));
+//
+//        for(Map.Entry<Boolean, List<Phone3>> item : phonesByCompany.entrySet()){
+//
+//            System.out.println(item.getKey());
+//            for(Phone3 phone : item.getValue()){
+//
+//                System.out.println(phone.getName());
+//            }
+//            System.out.println();
+//        }
 
-        for(Map.Entry<Boolean, List<Phone3>> item : phonesByCompany.entrySet()){
+        Map<String, Long> phonesByCompany = phoneStream.collect(
+                Collectors.groupingBy(Phone3::getCompany, Collectors.counting()));
 
-            System.out.println(item.getKey());
-            for(Phone3 phone : item.getValue()){
+        for(Map.Entry<String, Long> item : phonesByCompany.entrySet()){
 
-                System.out.println(phone.getName());
-            }
-            System.out.println();
+            System.out.println(item.getKey() + " - " + item.getValue());
         }
     }
 }
