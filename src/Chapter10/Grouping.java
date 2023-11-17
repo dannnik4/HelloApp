@@ -1,7 +1,9 @@
 package Chapter10;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -48,12 +50,21 @@ public class Grouping {
 //            System.out.println(item.getKey() + " - " + item.getValue());
 //        }
 
-        Map<String, Integer> phonesByCompany = phoneStream.collect(
-                Collectors.groupingBy(Phone3::getCompany, Collectors.summingInt(Phone3::getPrice)));
+//        Map<String, Integer> phonesByCompany = phoneStream.collect(
+//                Collectors.groupingBy(Phone3::getCompany, Collectors.summingInt(Phone3::getPrice)));
+//
+//        for(Map.Entry<String, Integer> item : phonesByCompany.entrySet()){
+//
+//            System.out.println(item.getKey() + " - " + item.getValue());
+//        }
 
-        for(Map.Entry<String, Integer> item : phonesByCompany.entrySet()){
+        Map<String, Optional<Phone3>> phonesByCompany = phoneStream.collect(
+                Collectors.groupingBy(Phone3::getCompany,
+                        Collectors.minBy(Comparator.comparing(Phone3::getPrice))));
 
-            System.out.println(item.getKey() + " - " + item.getValue());
+        for(Map.Entry<String, Optional<Phone3>> item : phonesByCompany.entrySet()){
+
+            System.out.println(item.getKey() + " - " + item.getValue().get().getName());
         }
     }
 }
