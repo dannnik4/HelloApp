@@ -40,10 +40,18 @@ public class Grouping {
 //            System.out.println();
 //        }
 
-        Map<String, Long> phonesByCompany = phoneStream.collect(
-                Collectors.groupingBy(Phone3::getCompany, Collectors.counting()));
+//        Map<String, Long> phonesByCompany = phoneStream.collect(
+//                Collectors.groupingBy(Phone3::getCompany, Collectors.counting()));
+//
+//        for(Map.Entry<String, Long> item : phonesByCompany.entrySet()){
+//
+//            System.out.println(item.getKey() + " - " + item.getValue());
+//        }
 
-        for(Map.Entry<String, Long> item : phonesByCompany.entrySet()){
+        Map<String, Integer> phonesByCompany = phoneStream.collect(
+                Collectors.groupingBy(Phone3::getCompany, Collectors.summingInt(Phone3::getPrice)));
+
+        for(Map.Entry<String, Integer> item : phonesByCompany.entrySet()){
 
             System.out.println(item.getKey() + " - " + item.getValue());
         }
