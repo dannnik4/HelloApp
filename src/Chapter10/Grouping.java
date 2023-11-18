@@ -1,9 +1,6 @@
 package Chapter10;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -58,13 +55,22 @@ public class Grouping {
 //            System.out.println(item.getKey() + " - " + item.getValue());
 //        }
 
-        Map<String, Optional<Phone3>> phonesByCompany = phoneStream.collect(
+//        Map<String, Optional<Phone3>> phonesByCompany = phoneStream.collect(
+//                Collectors.groupingBy(Phone3::getCompany,
+//                        Collectors.minBy(Comparator.comparing(Phone3::getPrice))));
+//
+//        for(Map.Entry<String, Optional<Phone3>> item : phonesByCompany.entrySet()){
+//
+//            System.out.println(item.getKey() + " - " + item.getValue().get().getName());
+//        }
+
+        Map<String, IntSummaryStatistics> priceSummary = phoneStream.collect(
                 Collectors.groupingBy(Phone3::getCompany,
-                        Collectors.minBy(Comparator.comparing(Phone3::getPrice))));
+                        Collectors.summarizingInt(Phone3::getPrice)));
 
-        for(Map.Entry<String, Optional<Phone3>> item : phonesByCompany.entrySet()){
+        for(Map.Entry<String, IntSummaryStatistics> item : priceSummary.entrySet()){
 
-            System.out.println(item.getKey() + " - " + item.getValue().get().getName());
+            System.out.println(item.getKey() + " - " + item.getValue().getAverage());
         }
     }
 }
