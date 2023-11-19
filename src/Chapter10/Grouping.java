@@ -64,13 +64,25 @@ public class Grouping {
 //            System.out.println(item.getKey() + " - " + item.getValue().get().getName());
 //        }
 
-        Map<String, IntSummaryStatistics> priceSummary = phoneStream.collect(
+//        Map<String, IntSummaryStatistics> priceSummary = phoneStream.collect(
+//                Collectors.groupingBy(Phone3::getCompany,
+//                        Collectors.summarizingInt(Phone3::getPrice)));
+//
+//        for(Map.Entry<String, IntSummaryStatistics> item : priceSummary.entrySet()){
+//
+//            System.out.println(item.getKey() + " - " + item.getValue().getAverage());
+//        }
+
+        Map<String, List<String>> phonesByCompany = phoneStream.collect(
                 Collectors.groupingBy(Phone3::getCompany,
-                        Collectors.summarizingInt(Phone3::getPrice)));
+                        Collectors.mapping(Phone3::getName, Collectors.toList())));
 
-        for(Map.Entry<String, IntSummaryStatistics> item : priceSummary.entrySet()){
+        for(Map.Entry<String, List<String>> item : phonesByCompany.entrySet()){
 
-            System.out.println(item.getKey() + " - " + item.getValue().getAverage());
+            System.out.println(item.getKey());
+            for(String name : item.getValue()){
+                System.out.println(name);
+            }
         }
     }
 }
