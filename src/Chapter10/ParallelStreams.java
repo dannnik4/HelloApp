@@ -10,7 +10,7 @@ public class ParallelStreams {
 
 //        Stream<Integer> numbersStream = Stream.of(1, 2, 3, 4, 5, 6);
 //        Optional<Integer> result = numbersStream.parallel().reduce((x, y)-> x*y);
-//        System.out.println(result.get());
+//        System.out.println(result.get()); // 720
 
         List<String> people = Arrays.asList("Tom","Bob", "Sam", "Kate", "Tim");
 
