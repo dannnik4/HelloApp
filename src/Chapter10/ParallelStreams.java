@@ -19,5 +19,9 @@ public class ParallelStreams {
 
         System.out.println("\nПараллельный поток");
         people.parallelStream().filter(p->p.length()==3).forEach(System.out::println);
+
+        Stream<Integer> numbersStream = Stream.of(1, 2, 3, 4, 5, 6);
+        Integer result = numbersStream.parallel().reduce(1, (x,y)->x * y);
+        System.out.println(result);
     }
 }
